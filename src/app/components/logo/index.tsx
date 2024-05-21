@@ -3,9 +3,10 @@ import { SVGProps } from "react";
 export const Logo = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    fill="none"
     viewBox="0 0 108 70"
-    style={{ fill: "var(--primary)" }}
+    fill="none"
+    style={{ fill: "var(--primary)", width: "10rem" }}
+    className="logo-icon"
     {...props}
   >
     <g clipPath="url(#a)">

@@ -1,23 +1,28 @@
 import { fetchPageMarkdown } from "./lib/notion";
 import styles from "./page.module.css";
 import Markdown from "react-markdown";
+import React, { useMemo } from "react";
 
 const pageId = process.env.NOTION_PAGE_ID as string;
 
 export default async function Home() {
-  const home = await fetchPageMarkdown(pageId);
+  const home = await useMemo(() => {
+    return fetchPageMarkdown(pageId);
+  }, []);
 
   return (
     <main className={styles.main}>
-      <p className={styles.description}>
+      <div className={styles.description}>
         <Markdown
           components={{
-            p: ({ node, ...props }) => <span {...props} />,
+            a: ({ node, ...props }) => (
+              <a {...props} target="_blank" rel="noopener noreferrer" />
+            ),
           }}
         >
           {home.body}
         </Markdown>
-      </p>
+      </div>
     </main>
   );
 }
