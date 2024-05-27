@@ -1,8 +1,9 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import styles from "./page.module.css";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import { Header } from "./components/header";
+import type { Metadata } from "next";
 
 const geomanist = localFont({
   src: [
@@ -36,7 +37,7 @@ export default function RootLayout({
       <body className={geomanist.className}>
         <ThemeProvider enableSystem>
           <Header />
-          {children}
+          <main className={styles.main}>{children}</main>
         </ThemeProvider>
       </body>
     </html>

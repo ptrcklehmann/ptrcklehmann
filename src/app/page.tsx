@@ -1,3 +1,4 @@
+import { cookies } from "next/headers";
 import { fetchPageMarkdown } from "./lib/notion";
 import styles from "./page.module.css";
 import Markdown from "react-markdown";
@@ -11,18 +12,16 @@ export default async function Home() {
   }, []);
 
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <Markdown
-          components={{
-            a: ({ node, ...props }) => (
-              <a {...props} target="_blank" rel="noopener noreferrer" />
-            ),
-          }}
-        >
-          {home.body}
-        </Markdown>
-      </div>
-    </main>
+    <div className={styles.description}>
+      <Markdown
+        components={{
+          a: ({ node, ...props }) => (
+            <a {...props} target="_blank" rel="noopener noreferrer" />
+          ),
+        }}
+      >
+        {home.body}
+      </Markdown>
+    </div>
   );
 }
