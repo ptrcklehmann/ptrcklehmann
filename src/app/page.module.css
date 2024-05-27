@@ -27,8 +27,8 @@
   .main {
     padding: 2rem;
   }
-  .description {
-    font-size: 2rem;
+  .description p {
+    font-size: var(--fs-medium);
     line-height: 1.2;
   }
 }
@@ -38,9 +38,9 @@
   .main {
     padding: 1.5rem;
   }
-  .description {
+  .description p {
     width: 100%;
-    font-size: 1.8rem;
+    font-size: var(--fs-small);
     line-height: 1.2;
   }
 }

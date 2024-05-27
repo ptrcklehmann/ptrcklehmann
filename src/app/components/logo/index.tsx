@@ -5,7 +5,7 @@ export const Logo = (props: SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 108 70"
     fill="none"
-    style={{ fill: "var(--primary)", width: "10rem" }}
+    style={{ fill: "var(--primary)", width: "6rem" }}
     className="logo-icon"
     {...props}
   >

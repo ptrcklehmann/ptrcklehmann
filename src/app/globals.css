@@ -10,12 +10,12 @@
   --bg-body: #f7f6f3;
   --primary: #0000ff;
   --text: #182825;
-  --fs-html: 0.75vw;
-  --fs-tiny: 1.5rem;
+  --fs-html: 16px;
+  --fs-tiny: 0.8rem;
   --fs-details: 2rem;
-  --fs-small: 3rem;
-  --fs-medium: 4rem;
-  --fs-large: 5rem;
+  --fs-small: 1.5rem;
+  --fs-medium: 2.5rem;
+  --fs-large: 3.5rem;
 }
 
 [data-theme="dark"] {
