@@ -11,17 +11,21 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: #ffff00;
   position: absolute;
-  padding-left: 3.5rem;
   top: 0;
   z-index: 9;
 }
 
-.page-title {
+.title {
   margin-top: -4rem;
   font-family: var(--font-sans);
-  font-size: var(--fs-large);
+  font-size: 4rem;
   color: #182825;
+}
+.row {
+  width: 100%;
+  display: flex;
+  padding-left: 3.5rem;
+  background-color: #ffff00;
+  height: calc(100vh / 5);
 }
