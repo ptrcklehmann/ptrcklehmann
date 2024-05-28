@@ -24,3 +24,19 @@
 .switch:hover {
   transform: scale(1.1);
 }
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .switch {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .switch {
+    width: 3rem;
+    height: 3rem;
+  }
+}

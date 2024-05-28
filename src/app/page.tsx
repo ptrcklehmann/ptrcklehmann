@@ -1,8 +1,7 @@
-import { cookies } from "next/headers";
 import { fetchPageMarkdown } from "./lib/notion";
 import styles from "./page.module.css";
 import Markdown from "react-markdown";
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 
 const pageId = process.env.NOTION_PAGE_ID as string;
 

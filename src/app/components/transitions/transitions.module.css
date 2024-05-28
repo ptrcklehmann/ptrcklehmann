@@ -1,0 +1,27 @@
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-body);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+}
+.initial {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffff00;
+  position: absolute;
+  padding-left: 3.5rem;
+  top: 0;
+  z-index: 9;
+}
+
+.page-title {
+  margin-top: -4rem;
+  font-family: var(--font-sans);
+  font-size: var(--fs-large);
+  color: #182825;
+}
