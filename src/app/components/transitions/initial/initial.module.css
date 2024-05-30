@@ -11,15 +11,17 @@
   width: 100%;
   display: flex;
   padding-left: 3.5rem;
-  background-color: #ffff00;
+  background-color: #abe6cb;
   height: calc(100vh / 5);
 }
 
 .title {
-  margin-top: -4rem;
+  margin-top: -10rem;
   font-family: var(--font-sans);
   font-size: var(--fs-large);
-  color: #182825;
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
+  color: #252728;
 }
 
 /* Tablet and Smaller Desktop */

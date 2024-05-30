@@ -22,6 +22,22 @@ const geomanist = localFont({
   variable: "--geomanist" as const,
 });
 
+const polysans = localFont({
+  src: [
+    {
+      path: "../assets/fonts/PolySans-Slim.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/PolySans-MedianWide.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--polysans" as const,
+});
+
 export const metadata: Metadata = {
   title: "Patrick Lehmann Web Developer",
   description:
@@ -35,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={geomanist.className}>
+      <body className={polysans.className}>
         <ThemeProvider enableSystem>
           <InitialTransition />
           <Header />

@@ -36,7 +36,7 @@ export const InitialTransition = () => {
           >
             {rows.map((row, index) => (
               <Row key={row} index={index}>
-                {row === 3 ? (
+                {row === 4 ? (
                   <motion.h1
                     className={styles.title}
                     initial={{ opacity: 0, transform: "translateY(-35px)" }}
