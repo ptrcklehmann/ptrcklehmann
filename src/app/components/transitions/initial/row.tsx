@@ -7,11 +7,11 @@ const variants = {
   open: (index: number) => ({
     opacity: 1,
     transform: "translateY(0)",
-    transition: { ease: "linear", duration: 0.3, delay: index * 0.2 },
+    transition: { ease: "easeInOut", duration: 0.35, delay: index * 0.2 },
   }),
   closed: {
     opacity: 0,
-    transform: "translateY(-calc(100vh / 5))",
+    transform: "translateY(calc(-100vh / 5))",
   },
 };
 

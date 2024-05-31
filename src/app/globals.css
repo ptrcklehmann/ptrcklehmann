@@ -6,7 +6,6 @@
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
   --bg-body: #f4f6f5;
   --primary: #36e7b1;
   --text: #252728;
@@ -44,6 +43,7 @@ body {
 
 body {
   background: var(--bg-body);
+  transition: background-color 0.3s ease;
 }
 
 a {

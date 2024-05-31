@@ -3,10 +3,15 @@
   position: relative;
 }
 
+.container {
+  display: flex;
+}
+
 .description {
   color: var(--text);
   max-width: var(--max-width);
-  width: 80%;
+  transition: color 0.3s ease;
+  width: 75%;
 }
 
 .description p {
@@ -24,6 +29,11 @@
   line-height: 1.2;
   letter-spacing: -0.05rem;
   opacity: 0.75;
+  transition: opacity 0.2s ease-out;
+}
+
+.description a:hover {
+  opacity: 1;
 }
 
 /* Tablet and Smaller Desktop */

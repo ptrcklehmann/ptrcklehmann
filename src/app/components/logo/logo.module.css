@@ -1,12 +1,12 @@
 .logo {
   fill: var(--primary);
-  height: 5rem;
+  height: 4.5rem;
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .logo {
-    height: 4rem;
+    height: 3.5rem;
   }
 }
 
