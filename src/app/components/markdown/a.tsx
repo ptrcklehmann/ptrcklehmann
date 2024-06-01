@@ -1,4 +1,5 @@
 "use client";
+import { useProfileAnchor } from "@/app/hooks/useProfileAnchor";
 import { useCallback, useMemo } from "react";
 
 interface AnchorProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -6,6 +7,8 @@ interface AnchorProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 }
 
 export const A = ({ node, ...props }: AnchorProps) => {
+  const { toggleProfile } = useProfileAnchor();
+
   const letters = useMemo(
     () => props.children?.toString().split(""),
     [props.children]
@@ -13,9 +16,13 @@ export const A = ({ node, ...props }: AnchorProps) => {
 
   const handleProfileClick = useCallback<
     React.MouseEventHandler<HTMLAnchorElement>
-  >((event) => {
-    event.preventDefault();
-  }, []);
+  >(
+    (event) => {
+      event.preventDefault();
+      toggleProfile();
+    },
+    [toggleProfile]
+  );
 
   const renderLetters = (letters: string[]) =>
     letters.map((letter, index) => <span key={index}>{letter}</span>);

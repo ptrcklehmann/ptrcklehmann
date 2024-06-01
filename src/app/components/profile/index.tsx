@@ -2,24 +2,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import styles from "./profile.module.css";
+import { useProfileAnchor } from "@/app/hooks/useProfileAnchor";
 
 export const Profile = () => {
-  const [isProfileOpen, setIsProfileOpen] = useState(false);
-
-  useEffect(() => {
-    const toggleProfile = () => setIsProfileOpen((prevState) => !prevState);
-    const profileLink = document.querySelector('a[href="/profile"]');
-
-    if (profileLink) {
-      profileLink.addEventListener("click", toggleProfile);
-    }
-
-    return () => {
-      if (profileLink) {
-        profileLink.removeEventListener("click", toggleProfile);
-      }
-    };
-  }, []);
+  const { isProfileOpen } = useProfileAnchor();
 
   return (
     <AnimatePresence>

@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import { Header } from "./components/header";
 import type { Metadata } from "next";
 import { InitialTransition } from "./components/transitions/initial";
+import { ProfileAnchorProvider } from "./hooks/useProfileAnchor";
 
 const geomanist = localFont({
   src: [
@@ -53,9 +54,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={polysans.className}>
         <ThemeProvider enableSystem>
-          <InitialTransition />
-          <Header />
-          <main className={styles.main}>{children}</main>
+          <ProfileAnchorProvider>
+            <InitialTransition />
+            <Header />
+            <main className={styles.main}>{children}</main>
+          </ProfileAnchorProvider>
         </ThemeProvider>
       </body>
     </html>
