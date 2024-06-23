@@ -18,8 +18,8 @@
 .title {
   margin-top: -10rem;
   font-family: var(--font-sans);
-  font-size: var(--fs-large);
-  line-height: 1.2;
+  font-size: var(--fs-extra-large);
+  line-height: 1;
   letter-spacing: -0.05rem;
   color: #252728;
 }

@@ -16,6 +16,7 @@
   --fs-small: 1.5rem;
   --fs-medium: 2.5rem;
   --fs-large: 3.5rem;
+  --fs-extra-large: 6rem;
 }
 
 [data-theme="dark"] {

@@ -4,6 +4,11 @@
   padding: 3.5rem 3.5rem 0;
 }
 
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .header {

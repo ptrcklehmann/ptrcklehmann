@@ -7,14 +7,16 @@
   display: flex;
 }
 
+.markdown {
+  transform-origin: 0 0;
+}
+
 .description {
   position: relative;
   color: var(--text);
   max-width: var(--max-width);
   transition: color 0.3s ease;
   width: 75%;
-  margin-right: auto;
-  transform-origin: 0 0;
 }
 
 .description p {

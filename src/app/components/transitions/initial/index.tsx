@@ -36,7 +36,7 @@ export const InitialTransition = () => {
           >
             {rows.map((row, index) => (
               <Row key={row} index={index}>
-                {row === 4 ? (
+                {row === 3 ? (
                   <motion.h1
                     className={styles.title}
                     initial={{ opacity: 0, transform: "translateY(-35px)" }}
@@ -44,7 +44,8 @@ export const InitialTransition = () => {
                     animate={{ opacity: 1, transform: "translateY(0)" }}
                     transition={{ ease: "linear", duration: 0.2 }}
                   >
-                    Patrick Lehmann
+                    Patrick
+                    <br /> Lehmann
                   </motion.h1>
                 ) : null}
               </Row>

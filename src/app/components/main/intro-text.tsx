@@ -11,19 +11,25 @@ export const IntroText = ({ body }: { body: string }) => {
     <motion.div
       className={styles.description}
       animate={{
-        transform: isProfileOpen ? "scale(0.4, 0.4)" : "scale(1, 1)",
-        transition: {
-          duration: 0.75,
-        },
+        width: isProfileOpen ? "50%" : "75%",
       }}
+      transition={{ type: "spring", bounce: 0.25 }}
     >
-      <Markdown
-        components={{
-          a: ({ node, ...props }) => <A {...props} />,
+      <motion.div
+        className={styles.markdown}
+        animate={{
+          transform: isProfileOpen ? "scale(0.4, 0.4)" : "scale(1, 1)",
         }}
+        transition={{ type: "spring", bounce: 0.25 }}
       >
-        {body}
-      </Markdown>
+        <Markdown
+          components={{
+            a: ({ node, ...props }) => <A {...props} />,
+          }}
+        >
+          {body}
+        </Markdown>
+      </motion.div>
     </motion.div>
   );
 };
