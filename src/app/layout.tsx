@@ -6,6 +6,7 @@ import { Header } from "./components/header";
 import type { Metadata } from "next";
 import { InitialTransition } from "./components/transitions/initial";
 import { ProfileAnchorProvider } from "./hooks/useProfileAnchor";
+import StyledComponentsRegistry from "./lib/registry";
 
 const polysans = localFont({
   src: [
@@ -37,13 +38,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={polysans.className}>
-        <ThemeProvider enableSystem>
-          <ProfileAnchorProvider>
-            <InitialTransition />
-            <Header />
-            <main className={styles.main}>{children}</main>
-          </ProfileAnchorProvider>
-        </ThemeProvider>
+        <StyledComponentsRegistry>
+          <ThemeProvider enableSystem>
+            <ProfileAnchorProvider>
+              <InitialTransition />
+              <Header />
+              <main className={styles.main}>{children}</main>
+            </ProfileAnchorProvider>
+          </ThemeProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

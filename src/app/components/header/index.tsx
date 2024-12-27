@@ -3,17 +3,17 @@ import { useProfileAnchor } from "@/app/hooks/useProfileAnchor";
 import { BackButton } from "../back-button";
 import { Logo } from "../logo";
 import { ThemeSwitch } from "../switch";
-import styles from "./header.module.css";
 import { AnimatePresence, motion } from "framer-motion";
+import { HeaderContainer, LogoContainer } from "./styled";
 
 export const Header = () => {
   const { isProfileOpen, toggleProfile } = useProfileAnchor();
   return (
-    <header className={styles.header}>
+    <HeaderContainer>
       <AnimatePresence>
-        <motion.div
+        <LogoContainer
           key={isProfileOpen ? "profile" : "logo"}
-          className={styles.logoContainer}
+          as={motion.div}
           animate={{
             transform: isProfileOpen ? "translateX(0)" : "translateX(-9rem)",
             columnGap: isProfileOpen ? "0.5rem" : "3.5rem",
@@ -21,9 +21,9 @@ export const Header = () => {
         >
           <BackButton />
           <Logo />
-        </motion.div>
+        </LogoContainer>
         <ThemeSwitch />
       </AnimatePresence>
-    </header>
+    </HeaderContainer>
   );
 };
