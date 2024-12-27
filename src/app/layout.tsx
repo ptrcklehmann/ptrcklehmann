@@ -7,22 +7,6 @@ import type { Metadata } from "next";
 import { InitialTransition } from "./components/transitions/initial";
 import { ProfileAnchorProvider } from "./hooks/useProfileAnchor";
 
-const geomanist = localFont({
-  src: [
-    {
-      path: "../assets/fonts/Geomanist-Regular.woff",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Geomanist-Bold.woff",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--geomanist" as const,
-});
-
 const polysans = localFont({
   src: [
     {

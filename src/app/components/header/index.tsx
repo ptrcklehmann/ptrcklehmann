@@ -12,6 +12,7 @@ export const Header = () => {
     <header className={styles.header}>
       <AnimatePresence>
         <motion.div
+          key={isProfileOpen ? "profile" : "logo"}
           className={styles.logoContainer}
           animate={{
             transform: isProfileOpen ? "translateX(0)" : "translateX(-9rem)",
