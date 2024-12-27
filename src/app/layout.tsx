@@ -1,12 +1,8 @@
-import "./globals.css";
+import { GlobalStyles } from "@/styles/global";
+import { Metadata } from "next";
 import localFont from "next/font/local";
-import { ThemeProvider } from "next-themes";
-import { Header } from "./components/header";
-import type { Metadata } from "next";
-import { InitialTransition } from "./components/transitions/initial";
-import { ProfileAnchorProvider } from "./hooks/useProfileAnchor";
 import StyledComponentsRegistry from "./lib/registry";
-import { StyledMain } from "./styled";
+import { Core } from "nextjs-darkmode";
 
 const polysans = localFont({
   src: [
@@ -24,11 +20,22 @@ const polysans = localFont({
   variable: "--polysans" as const,
 });
 
-export const metadata: Metadata = {
-  title: "Patrick Lehmann Web Developer",
-  description:
-    "I'm Patrick Lehmann, a creative Developer and your designer's favourite programmer. I create digital experiences with React Native and Next.js",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Patrick Lehmann Web Developer",
+    description:
+      "I'm Patrick Lehmann, a creative Developer and your designer's favourite programmer. I create digital experiences with React Native and Next.js",
+    category: "development",
+    openGraph: {
+      siteName: "Patrick Lehmann",
+      url: "https://ptrcklehmann.com",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 export default function RootLayout({
   children,
@@ -39,13 +46,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={polysans.className}>
         <StyledComponentsRegistry>
-          <ThemeProvider enableSystem>
-            <ProfileAnchorProvider>
-              <InitialTransition />
-              <Header />
-              <StyledMain>{children}</StyledMain>
-            </ProfileAnchorProvider>
-          </ThemeProvider>
+          <GlobalStyles />
+          <Core />
+          {children}
         </StyledComponentsRegistry>
       </body>
     </html>

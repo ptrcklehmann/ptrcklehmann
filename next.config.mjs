@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const config = {
+  compiler: {
+    styledComponents: true,
+  },
+  webpack: (config, { isServer }) => {
+    // Add a rule to handle .md files
+    config.module.rules.push({
+      test: /\.md$/,
+      use: "raw-loader",
+    });
 
-export default nextConfig;
+    return config;
+  },
+};
+
+export default config;

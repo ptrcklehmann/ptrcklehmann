@@ -1,13 +1,22 @@
-import { fetchPageMarkdown } from "@/app/lib/notion";
-import { useMemo } from "react";
+import { getMarkdownData } from "@/app/lib/markdown";
 import { IntroText } from "./intro-text";
+import { useEffect, useState } from "react";
 
-const pageId = process.env.NOTION_PAGE_ID as string;
+export default function Intro() {
+  const [markdown, setMarkdown] = useState("");
 
-export default async function Intro() {
-  const home = await useMemo(() => {
-    return fetchPageMarkdown(pageId);
+  useEffect(() => {
+    const fetchMarkdown = async () => {
+      try {
+        const response = await getMarkdownData("intro");
+        setMarkdown(response.contentHtml);
+      } catch (error) {
+        console.error("Failed to fetch markdown:", error);
+      }
+    };
+
+    fetchMarkdown();
   }, []);
 
-  return <IntroText body={home.body} />;
+  return <IntroText body={markdown} />;
 }
