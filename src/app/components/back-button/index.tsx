@@ -1,7 +1,6 @@
 "use client";
-import styles from "./back-button.module.css";
-import { AnimatePresence, motion } from "framer-motion";
 import { useProfileAnchor } from "@/app/hooks/useProfileAnchor";
+import styles from "./back-button.module.css";
 
 export const BackButton = () => {
   const { isProfileOpen, toggleProfile } = useProfileAnchor();

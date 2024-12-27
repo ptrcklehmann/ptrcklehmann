@@ -1,8 +1,7 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import styles from "./profile.module.css";
 import { useProfileAnchor } from "@/app/hooks/useProfileAnchor";
+import { AnimatePresence, motion } from "framer-motion";
+import styles from "./profile.module.css";
 
 export const Profile = () => {
   const { isProfileOpen } = useProfileAnchor();

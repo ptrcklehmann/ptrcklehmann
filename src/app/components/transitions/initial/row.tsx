@@ -1,6 +1,6 @@
 "use client";
+import { motion } from "framer-motion";
 import { ReactNode } from "react";
-import { Variants, motion } from "framer-motion";
 import styles from "./initial.module.css";
 
 const variants = {
