@@ -1,3 +1,4 @@
+"use client";
 import { AnimatePresence } from "framer-motion";
 import { Backdrop, InitialContainer, Title } from "./styled";
 import { Row } from "./row";

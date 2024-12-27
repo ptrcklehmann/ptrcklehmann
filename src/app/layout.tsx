@@ -1,5 +1,4 @@
 import "./globals.css";
-import styles from "./page.module.css";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import { Header } from "./components/header";
@@ -7,6 +6,7 @@ import type { Metadata } from "next";
 import { InitialTransition } from "./components/transitions/initial";
 import { ProfileAnchorProvider } from "./hooks/useProfileAnchor";
 import StyledComponentsRegistry from "./lib/registry";
+import { StyledMain } from "./styled";
 
 const polysans = localFont({
   src: [
@@ -43,7 +43,7 @@ export default function RootLayout({
             <ProfileAnchorProvider>
               <InitialTransition />
               <Header />
-              <main className={styles.main}>{children}</main>
+              <StyledMain>{children}</StyledMain>
             </ProfileAnchorProvider>
           </ThemeProvider>
         </StyledComponentsRegistry>
