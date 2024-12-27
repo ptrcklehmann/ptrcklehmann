@@ -9,7 +9,5 @@ export default async function Intro() {
     return fetchPageMarkdown(pageId);
   }, []);
 
-  console.log("home", home);
-
   return <IntroText body={home.body} />;
 }

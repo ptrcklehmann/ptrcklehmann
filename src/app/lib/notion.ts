@@ -7,9 +7,7 @@ export const notion = new Client({
 
 export const fetchPageMarkdown = async (pageId: string) => {
   const notion2markdown = new NotionToMarkdown({ notionClient: notion });
-  console.log("notion2markdown", notion2markdown);
   const markdownBlocks = await notion2markdown.pageToMarkdown(pageId);
-  console.log("markdownBlocks", markdownBlocks);
   const { parent: markdownBody } =
     notion2markdown.toMarkdownString(markdownBlocks);
 
