@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import styles from "./switch.module.css";
+import { SwitchButton, SwitchSpan } from "./styled";
 
 export const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme();
@@ -10,8 +10,8 @@ export const ThemeSwitch = () => {
   };
 
   return (
-    <button className={styles.switch} onClick={handleOnClick}>
-      <span>Switch</span>
-    </button>
+    <SwitchButton onClick={handleOnClick}>
+      <SwitchSpan>Switch</SwitchSpan>
+    </SwitchButton>
   );
 };

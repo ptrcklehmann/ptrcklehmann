@@ -1,13 +1,13 @@
 "use client";
 import { useProfileAnchor } from "@/app/hooks/useProfileAnchor";
-import styles from "./back-button.module.css";
+import { StyledButton, StyledSpan } from "./styled";
 
 export const BackButton = () => {
   const { toggleProfile } = useProfileAnchor();
 
   return (
-    <button className={styles.back} onClick={toggleProfile}>
-      <span>Back</span>
-    </button>
+    <StyledButton onClick={toggleProfile}>
+      <StyledSpan>Back</StyledSpan>
+    </StyledButton>
   );
 };

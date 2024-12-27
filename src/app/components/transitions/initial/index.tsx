@@ -1,9 +1,7 @@
-"use client";
-import styles from "./initial.module.css";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Backdrop } from "./backdrop";
+import { AnimatePresence } from "framer-motion";
+import { Backdrop, InitialContainer, Title } from "./styled";
 import { Row } from "./row";
+import { useEffect, useState } from "react";
 
 const rows = [1, 2, 3, 4, 5];
 export const reviewDuration = 1;
@@ -24,7 +22,7 @@ export const InitialTransition = () => {
     <AnimatePresence>
       {!hasFinishedAnimating && (
         <>
-          <motion.div
+          <InitialContainer
             initial={{ height: 0 }}
             exit={{ height: 0 }}
             animate={{ height: "100%" }}
@@ -32,13 +30,12 @@ export const InitialTransition = () => {
               ease: "easeInOut",
               duration: reviewDuration,
             }}
-            className={styles.initial}
           >
             {rows.map((row) => (
               <Row key={row} index={row}>
                 {row === 3 ? (
-                  <motion.h1
-                    className={styles.title}
+                  <Title
+                    as={Title}
                     initial={{ opacity: 0, transform: "translateY(-35px)" }}
                     exit={{ opacity: 0, transform: "translateY(-35px)" }}
                     animate={{ opacity: 1, transform: "translateY(0)" }}
@@ -46,11 +43,11 @@ export const InitialTransition = () => {
                   >
                     Patrick
                     <br /> Lehmann
-                  </motion.h1>
+                  </Title>
                 ) : null}
               </Row>
             ))}
-          </motion.div>
+          </InitialContainer>
           <Backdrop />
         </>
       )}

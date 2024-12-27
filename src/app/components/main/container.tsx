@@ -1,12 +1,12 @@
-import styles from "./main.module.css";
+import { Container } from "./styled";
 import Intro from "./intro";
 import { Profile } from "../profile";
 
 export const MainContainer = () => {
   return (
-    <div className={styles.container}>
+    <Container>
       <Intro />
       <Profile />
-    </div>
+    </Container>
   );
 };

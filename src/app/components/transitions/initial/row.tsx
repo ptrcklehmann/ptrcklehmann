@@ -1,7 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
 import { ReactNode } from "react";
-import styles from "./initial.module.css";
+import { RowContainer } from "./styled";
 
 const variants = {
   open: (index: number) => ({
@@ -23,14 +22,13 @@ export const Row = ({
   index: number;
 }) => {
   return (
-    <motion.div
+    <RowContainer
       variants={variants}
       custom={index}
       initial="closed"
       animate="open"
-      className={styles.row}
     >
       {children}
-    </motion.div>
+    </RowContainer>
   );
 };
