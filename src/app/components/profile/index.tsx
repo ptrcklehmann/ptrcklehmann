@@ -1,5 +1,5 @@
 "use client";
-import { useProfileAnchor } from "@/app/hooks/useProfileAnchor";
+import { useProfileAnchor } from '@/hooks/useProfileAnchor';
 import { AnimatePresence } from "framer-motion";
 import { Container } from "./styled";
 

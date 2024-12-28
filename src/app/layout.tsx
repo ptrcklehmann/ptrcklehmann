@@ -1,7 +1,7 @@
 import { GlobalStyles } from "@/styles/global";
 import { Metadata } from "next";
 import localFont from "next/font/local";
-import StyledComponentsRegistry from "./lib/registry";
+import StyledComponentsRegistry from '../lib/registry';
 import { Core } from "nextjs-darkmode";
 
 const polysans = localFont({

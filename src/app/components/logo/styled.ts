@@ -1,16 +1,17 @@
-import styled from "styled-components";
+import { between, lessThan } from '@/styles/breakpoints';
+import styled from 'styled-components';
 
 export const StyledLogo = styled.svg`
-  fill: var(--primary);
-  height: 4.5rem;
+    fill: var(--primary);
+    height: 4.5rem;
 
-  /* Tablet and Smaller Desktop */
-  @media (min-width: 701px) and (max-width: 1120px) {
-    height: 3.5rem;
-  }
+    /* Tablet and Smaller Desktop */
+    ${between('small', 'medium')`
+        height: 3.5rem;
+    `}
 
-  /* Mobile */
-  @media (max-width: 700px) {
-    height: 3rem;
-  }
+    /* Mobile */
+    ${lessThan('small')`
+        height: 3rem;
+    `}
 `;
