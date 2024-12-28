@@ -6,20 +6,20 @@ import { GlobalStyles } from '@/styles/global';
 
 import StyledComponentsRegistry from '../lib/registry';
 
-const polysans = localFont({
+const geomanist = localFont({
     src: [
         {
-            path: '../assets/fonts/PolySans-Slim.woff2',
+            path: '../assets/fonts/Geomanist-Regular.woff',
             weight: '400',
             style: 'normal',
         },
         {
-            path: '../assets/fonts/PolySans-MedianWide.woff2',
+            path: '../assets/fonts/Geomanist-Bold.woff',
             weight: '700',
             style: 'normal',
         },
     ],
-    variable: '--polysans' as const,
+    variable: '--geomanist' as const,
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -46,7 +46,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={polysans.className}>
+            <body className={geomanist.className}>
                 <StyledComponentsRegistry>
                     <GlobalStyles />
                     <Core />

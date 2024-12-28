@@ -2,34 +2,37 @@
 import { HoverPreviewLink } from "../preview-link";
 import { Intro, Paragraph } from './styled';
 
-export const IntroText = () => {
-    return (
-        <Intro transition={{ type: 'spring', bounce: 0.25 }}>
-            <Paragraph>
-                Hello, I&apos;m Patrick Lehmann—a{' '}
-                <HoverPreviewLink
-                    href="https://github.com/ptrcklehmann"
-                    target="_blank"
-                    title="patrick lehmann's github"
-                    label="Front-end Developer"
-                />{' '}
-                and your designer&apos;s favorite programmer.
-            </Paragraph>
-            <Paragraph>
-                Born in Brazil and now calling Berlin home, I&apos;m passionate about the
-                ever-evolving tech landscape, with a special focus on UX design, AI, and creating
-                impactful products.
-            </Paragraph>
-            <Paragraph>
-                Currently, I&apos;m developing innovative features at{' '}
-                <HoverPreviewLink
-                    href="https://code-b.com/"
-                    target="_blank"
-                    title="code-b agile websolutions"
-                    label="code-b"
-                />
-                .
-            </Paragraph>
-        </Intro>
-    );
-};
+export const IntroText = () => (
+    <Intro transition={{ type: 'spring', bounce: 0.25 }}>
+        <Paragraph>
+            Hey there, 👋 I&apos;m Patrick Lehmann—a detail-oriented{' '}
+            <HoverPreviewLink
+                href="https://github.com/ptrcklehmann"
+                target="_blank"
+                title="patrick lehmann's github"
+                label="front end developer"
+            />{' '}
+            from{' '}
+            <HoverPreviewLink
+                href="https://goo.gl/maps/FJqL7jfmUvnJ2Leu9"
+                target="_blank"
+                title="Lehmann's farm"
+                label="rural Brazil"
+            />
+            , currently living in Berlin. I&apos;m your designer&apos;s favorite programmer,
+            bringing over seven years of web development experience and a passion for UX design, AI,
+            and building impactful products.{' '}
+        </Paragraph>
+        <Paragraph>
+            These days, I&apos;m crafting innovative features at{' '}
+            <HoverPreviewLink
+                href="https://code-b.com/"
+                target="_blank"
+                title="code-b agile websolutions"
+                label="code-b"
+            />
+            , working with React and other hip frameworks. If you fancy a chat, drop me a line—stay
+            bold and have a delightful day!
+        </Paragraph>
+    </Intro>
+);

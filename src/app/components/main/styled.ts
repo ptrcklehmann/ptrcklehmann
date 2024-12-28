@@ -36,7 +36,7 @@ export const Paragraph = styled.p`
     line-height: 1.2;
     letter-spacing: -0.03rem;
     overflow: initial;
-    font-weight: 400;
+    font-weight: 700;
     margin-bottom: 1rem;
 
     /* Tablet and Smaller Desktop */

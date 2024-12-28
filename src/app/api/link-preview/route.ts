@@ -10,9 +10,18 @@ export async function GET(request: Request) {
     }
 
     try {
-        const data = await getLinkPreview(url);
+        const data = await getLinkPreview(url, {
+            followRedirects: 'follow',
+            headers: {
+                'user-agent': 'Googlebot/2.1 (+http://www.google.com/bot.html)',
+            },
+            timeout: 10000,
+        });
         return NextResponse.json(data, { status: 200 });
     } catch (error) {
-        return NextResponse.json({ error: 'Failed to fetch link preview' }, { status: 500 });
+        return NextResponse.json(
+            { error: `Failed to fetch link preview: ${error}` },
+            { status: 500 },
+        );
     }
 }

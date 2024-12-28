@@ -76,7 +76,7 @@ const globalStyles = css`
     :root {
         --max-width: 1100px;
         --border-radius: 12px;
-        --font-sans: var(--polysans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        --font-sans: var(--geomanist), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
             'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
         --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
             'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono',

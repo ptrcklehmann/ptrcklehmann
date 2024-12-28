@@ -14,7 +14,8 @@ export const PreviewCard = ({
   linkData: LinkPreview;
   coords: { x: number; y: number };
 }) => {
-  const { images, favicons, title, url, description } = linkData;
+  const { images, title, description } = linkData;
+  let customTitle = title === 'Google Maps' ? "Lehmann's farm" : title;
   return (
       <LinkPreviewCard
           style={{
@@ -25,8 +26,8 @@ export const PreviewCard = ({
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
       >
-          {images[0] ? <PreviewImage src={favicons[0]} alt={title} /> : null}
-          <PreviewUrl>{url}</PreviewUrl>
+          {images && images[0] ? <PreviewImage src={images[0]} alt={title} /> : null}
+          <PreviewUrl>{customTitle}</PreviewUrl>
           <PreviewDescription>{description}</PreviewDescription>
       </LinkPreviewCard>
   );
