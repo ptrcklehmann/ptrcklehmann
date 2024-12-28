@@ -1,7 +1,8 @@
 "use client";
 import { ColorSchemePreference } from "nextjs-darkmode";
-import { SwitchButton, SwitchSpan } from "./styled";
 import { useMode } from "nextjs-darkmode/hooks";
+
+import { SwitchButton, SwitchSpan } from "./styled";
 
 export const ThemeSwitch = () => {
   const { resolvedMode, setMode } = useMode();

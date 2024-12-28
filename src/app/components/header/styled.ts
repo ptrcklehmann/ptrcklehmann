@@ -1,5 +1,6 @@
-import { between, lessThan } from '@/styles/breakpoints';
 import styled from 'styled-components';
+
+import { between, lessThan } from '@/styles/breakpoints';
 
 export const HeaderContainer = styled.header`
     display: flex;

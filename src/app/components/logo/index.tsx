@@ -1,4 +1,5 @@
 import { SVGProps } from "react";
+
 import { StyledLogo } from "./styled";
 
 export const Logo = (props: SVGProps<SVGSVGElement>) => (

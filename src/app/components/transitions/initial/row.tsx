@@ -1,5 +1,6 @@
 "use client";
 import { ReactNode } from "react";
+
 import { RowContainer } from "./styled";
 
 const variants = {

@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import styles from "./initial.module.css";
+
 import { reviewDuration } from ".";
+import styles from "./initial.module.css";
 
 export const Backdrop = () => {
   return (

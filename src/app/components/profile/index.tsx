@@ -1,6 +1,8 @@
 "use client";
-import { useProfileAnchor } from '@/hooks/useProfileAnchor';
 import { AnimatePresence } from "framer-motion";
+
+import { useProfileAnchor } from '@/hooks/useProfileAnchor';
+
 import { Container } from "./styled";
 
 export const Profile = () => {

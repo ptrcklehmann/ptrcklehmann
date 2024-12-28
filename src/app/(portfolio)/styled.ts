@@ -1,9 +1,11 @@
-import { between, lessThan } from '@/styles/breakpoints';
 import styled from 'styled-components';
+
+import { between, lessThan } from '@/styles/breakpoints';
 
 export const Main = styled.main`
     padding: 3.5rem;
     position: relative;
+    margin-bottom: 8rem;
 
     /* Tablet and Smaller Desktop */
     ${between('small', 'medium')`

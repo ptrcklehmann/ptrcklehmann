@@ -1,11 +1,11 @@
 {
-  "extends": "next",
-  "plugins": ["simple-import-sort"],
-  "rules": {
-    "simple-import-sort/imports": "warn",
-    "simple-import-sort/exports": "warn",
-    "react-hooks/exhaustive-deps": "error",
-    "no-unused-vars": "warn",
-    "no-console": "warn"
-  }
+    "extends": "next",
+    "plugins": ["simple-import-sort"],
+    "rules": {
+        "simple-import-sort/imports": "warn",
+        "simple-import-sort/exports": "warn",
+        "react-hooks/exhaustive-deps": "error",
+        "no-unused-vars": "warn",
+        "no-console": "warn"
+    }
 }

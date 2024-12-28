@@ -1,5 +1,6 @@
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import styled from 'styled-components';
+
 import { between, lessThan } from '@/styles/breakpoints';
 
 export const Main = styled.main`
@@ -21,7 +22,7 @@ export const Container = styled.div`
     display: flex;
 `;
 
-export const Intro = styled(motion.div)`
+export const Intro = styled(motion.article)`
     position: relative;
     color: var(--text);
     max-width: var(--max-width);

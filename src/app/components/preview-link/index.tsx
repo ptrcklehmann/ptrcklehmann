@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import React, { useState, MouseEvent } from 'react';
+import React, { MouseEvent, useState } from 'react';
+
 import { PreviewCard } from './preview-card';
 import { PreviewLink } from './styled';
 
@@ -33,6 +33,7 @@ export function HoverPreviewLink({ label, ...props }: HoverPreviewLinkProps) {
             const data = await response.json();
             setLinkData(data);
         } catch (err) {
+            // eslint-disable-next-line no-console
             console.error('Failed to fetch link preview:', err);
         }
     };

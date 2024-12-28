@@ -1,5 +1,4 @@
-"use client";
-import { MainContainer } from '../components/main/container';
+import { MainContainer } from '../components/main';
 
 export default function IndexRoute() {
     return <MainContainer />;

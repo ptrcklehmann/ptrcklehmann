@@ -1,8 +1,9 @@
 "use client";
 import { AnimatePresence } from "framer-motion";
-import { Backdrop, InitialContainer, Title } from "./styled";
-import { Row } from "./row";
 import { useEffect, useState } from "react";
+
+import { Row } from "./row";
+import { Backdrop, InitialContainer, Title } from "./styled";
 
 const rows = [1, 2, 3, 4, 5];
 export const reviewDuration = 1;

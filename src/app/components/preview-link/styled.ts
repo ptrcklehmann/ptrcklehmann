@@ -27,11 +27,11 @@ export const LinkPreviewCard = styled(motion.span)`
 `;
 
 export const PreviewImage = styled.img`
-    width: 100%;
+    width: 50%;
     height: auto;
     margin-bottom: 0.2rem;
-    svg {
-        fill: var(--text);
+    #Ebene_2 > defs > style > .cls-1 {
+        fill: var(--text) !important;
     }
 `;
 

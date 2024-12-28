@@ -1,5 +1,6 @@
-import { between, lessThan } from '@/styles/breakpoints';
 import styled from 'styled-components';
+
+import { between, lessThan } from '@/styles/breakpoints';
 
 export const SwitchButton = styled.button`
     border: none;
