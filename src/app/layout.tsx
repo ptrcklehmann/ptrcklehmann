@@ -23,13 +23,8 @@ const polysans = localFont({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/visit`, {
-      cache: 'no-store'
-  });
-  const data = await response.json();
-
     return {
-        title: data.message,
+        title: 'Patrick Lehmann',
         description:
             "I'm Patrick Lehmann, a creative Developer and your designer's favourite programmer. I create digital experiences with React Native and Next.js",
         category: 'development',
