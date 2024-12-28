@@ -24,7 +24,7 @@ export const MarkdownContainer = styled(motion.div)`
   transform-origin: 0 0;
 `;
 
-export const Description = styled(motion.div)`
+export const Intro = styled(motion.div)`
   position: relative;
   color: var(--text);
   max-width: var(--max-width);

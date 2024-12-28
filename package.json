@@ -13,6 +13,7 @@
     "@notionhq/client": "^2.2.15",
     "framer-motion": "^11.2.6",
     "gray-matter": "^4.0.3",
+    "link-preview-js": "^3.0.12",
     "next": "14.2.3",
     "next-themes": "^0.3.0",
     "nextjs-darkmode": "^1.0.9",

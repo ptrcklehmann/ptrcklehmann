@@ -1,10 +1,10 @@
+import { IntroText } from "./intro-text";
 import { Container } from "./styled";
-import Intro from "./intro";
 
 export const MainContainer = () => {
   return (
     <Container>
-      <Intro />
+      <IntroText />
     </Container>
   );
 };
