@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { Core } from 'nextjs-darkmode';
@@ -48,6 +49,7 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
             <body className={geomanist.className}>
                 <StyledComponentsRegistry>
+                    <Analytics />
                     <GlobalStyles />
                     <Core />
                     {children}
