@@ -27,11 +27,23 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
         title: 'Patrick Lehmann',
         description:
-            "I'm Patrick Lehmann, a creative Developer and your designer's favourite programmer. I create digital experiences with React Native and Next.js",
+            'Patrick Lehmann, a creative front-end dev and your designer’s favorite programmer. With 7+ years crafting impactful products. Stay bold and say hi!',
         category: 'development',
         openGraph: {
+            title: 'Patrick Lehmann',
             siteName: 'Patrick Lehmann',
             url: 'https://ptrcklehmann.com',
+            type: 'website',
+            description:
+                'Patrick Lehmann, a creative front-end dev and your designer’s favorite programmer. With 7+ years crafting impactful products. Stay bold and say hi!',
+            images: [
+                {
+                    url: '/apple-icon.png',
+                    width: 180,
+                    height: 180,
+                    alt: 'Patrick Lehmann',
+                },
+            ],
         },
         robots: {
             index: true,
