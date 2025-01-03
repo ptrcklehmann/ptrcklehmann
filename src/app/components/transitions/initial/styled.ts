@@ -35,7 +35,7 @@ export const RowContainer = styled(motion.div)`
     width: 100%;
     display: flex;
     padding-left: 3.5rem;
-    background-color: #abe6cb;
+    background-color: var(--primary);
     height: calc(100vh / 5);
 `;
 
