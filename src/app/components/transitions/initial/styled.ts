@@ -20,14 +20,9 @@ export const Title = styled(motion.h1)`
     letter-spacing: -0.05rem;
     color: #252728;
 
-    /* Tablet and Smaller Desktop */
-    ${between('small', 'medium')`
-        font-size: var(--fs-medium);
-    `}
-
-    /* Mobile */
-    ${lessThan('small')`
-        font-size: var(--fs-small);
+    /* Tablet and lower */
+    ${lessThan('medium')`
+       font-size: var(--fs-large);
     `}
 `;
 
