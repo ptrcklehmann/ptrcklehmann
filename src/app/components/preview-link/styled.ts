@@ -4,14 +4,12 @@ import styled from 'styled-components';
 
 export const PreviewLink = styled(Link)`
     font-weight: 700;
-    color: var(--primary);
     line-height: 1.2;
     letter-spacing: -0.05rem;
-    opacity: 0.75;
+    color: transparent;
+    background-clip: text;
+    background-image: var(--yellow-gradient);
     transition: opacity 0.2s ease-out;
-    &:hover {
-        opacity: 1;
-    }
 `;
 
 export const LinkPreviewCard = styled(motion.span)`

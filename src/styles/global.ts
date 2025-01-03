@@ -92,6 +92,7 @@ const globalStyles = css`
         --bg-body: #f4f6f5;
         --bg-card: #e4e6e5;
         --primary: #36e7b1;
+        --yellow-gradient: linear-gradient(to top, #c8a001, #b9ac1c, #cdca32, #ddd92a);
         --text: #252728;
     }
 

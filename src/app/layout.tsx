@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { Core } from 'nextjs-darkmode';
@@ -62,6 +63,7 @@ export default function RootLayout({
             <body className={geomanist.className}>
                 <StyledComponentsRegistry>
                     <Analytics />
+                    <SpeedInsights />
                     <GlobalStyles />
                     <Core />
                     {children}
