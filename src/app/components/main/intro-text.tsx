@@ -1,35 +1,38 @@
 "use client";
-import { motion } from "framer-motion";
-import { A } from "../markdown/a";
-import styles from "./main.module.css";
-import Markdown from "react-markdown";
-import { useProfileAnchor } from "@/app/hooks/useProfileAnchor";
+import { HoverPreviewLink } from "../preview-link";
+import { Intro, Paragraph } from './styled';
 
-export const IntroText = ({ body }: { body: string }) => {
-  const { isProfileOpen } = useProfileAnchor();
-  return (
-    <motion.div
-      className={styles.description}
-      animate={{
-        width: isProfileOpen ? "50%" : "75%",
-      }}
-      transition={{ type: "spring", bounce: 0.25 }}
-    >
-      <motion.div
-        className={styles.markdown}
-        animate={{
-          transform: isProfileOpen ? "scale(0.4, 0.4)" : "scale(1, 1)",
-        }}
-        transition={{ type: "spring", bounce: 0.25 }}
-      >
-        <Markdown
-          components={{
-            a: ({ node, ...props }) => <A {...props} />,
-          }}
-        >
-          {body}
-        </Markdown>
-      </motion.div>
-    </motion.div>
-  );
-};
+export const IntroText = () => (
+    <Intro transition={{ type: 'spring', bounce: 0.25 }}>
+        <Paragraph>
+            Hey there, 👋 I&apos;m Patrick Lehmann—a detail-oriented{' '}
+            <HoverPreviewLink
+                href="https://github.com/ptrcklehmann"
+                target="_blank"
+                title="patrick lehmann's github"
+                label="front end developer"
+            />{' '}
+            from{' '}
+            <HoverPreviewLink
+                href="https://goo.gl/maps/FJqL7jfmUvnJ2Leu9"
+                target="_blank"
+                title="Lehmann's farm"
+                label="rural Brazil"
+            />
+            , currently living in Berlin. I&apos;m your designer&apos;s favorite programmer,
+            bringing over seven years of web development experience and a passion for UX design, AI,
+            and building impactful products.{' '}
+        </Paragraph>
+        <Paragraph>
+            These days, I&apos;m crafting innovative features at{' '}
+            <HoverPreviewLink
+                href="https://code-b.com/"
+                target="_blank"
+                title="code-b agile websolutions"
+                label="code-b"
+            />
+            , working with React and other hip frameworks. If you fancy a chat, drop me a line—stay
+            bold and have a delightful day!
+        </Paragraph>
+    </Intro>
+);
