@@ -80,6 +80,16 @@ export const TitleLine = styled(motion.div)`
     line-height: 0.85;
     overflow: hidden;
     font-weight: 700;
+
+    /* Tablet and lower */
+    ${lessThan('medium')`
+       font-size: var(--fs-large);
+    `}
+
+    /* Mobile */
+    ${lessThan('small')`
+       font-size: var(--fs-medium);
+    `}
 `;
 
 export const Title = styled(motion.h1)`
