@@ -77,6 +77,7 @@ export const TitleContainer = styled(motion.div)`
 export const TitleLine = styled(motion.div)`
     display: flex;
     font-size: var(--fs-extra-large);
+    color: #252728;
     line-height: 0.85;
     overflow: hidden;
     font-weight: 700;
