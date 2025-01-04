@@ -4,8 +4,8 @@ import { between, lessThan } from '@/styles/breakpoints';
 
 export const SwitchButton = styled.button`
     border: none;
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 4rem;
+    height: 4rem;
     cursor: pointer;
     border-radius: 50%;
     position: relative;
