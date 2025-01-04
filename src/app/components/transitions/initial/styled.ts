@@ -34,7 +34,7 @@ export const RowContainer = styled(motion.div)`
     flex-direction: column;
     gap: 1rem;
     padding-left: 3.5rem;
-    background-color: var(--primary);
+    background: var(--primary);
     height: calc(100vh / 5);
 `;
 

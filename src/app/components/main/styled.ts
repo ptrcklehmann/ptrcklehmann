@@ -33,8 +33,7 @@ export const Intro = styled(motion.article)`
 export const Paragraph = styled.p`
     font-family: var(--font-sans);
     font-size: var(--fs-large);
-    line-height: 1.2;
-    letter-spacing: -0.03rem;
+    line-height: 1.5;
     overflow: initial;
     font-weight: 700;
     margin-bottom: 1rem;

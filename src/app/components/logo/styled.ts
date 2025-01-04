@@ -4,7 +4,7 @@ import { between, lessThan } from '@/styles/breakpoints';
 
 export const StyledLogo = styled.svg`
     fill: url('#linear-yellow');
-    height: 4.5rem;
+    height: 4rem;
 
     /* Tablet and Smaller Desktop */
     ${between('small', 'medium')`

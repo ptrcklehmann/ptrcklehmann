@@ -87,12 +87,12 @@ const globalStyles = css`
         --fs-details: 2rem;
         --fs-small: 1.5rem;
         --fs-medium: 2.5rem;
-        --fs-large: 4rem;
+        --fs-large: 4.5rem;
         --fs-extra-large: 6rem;
         --bg-body: #f4f6f5;
         --bg-card: #e4e6e5;
-        --primary: #c8a001;
-        --yellow-gradient: linear-gradient(to top, #c8a001, #b9ac1c, #cdca32, #ddd92a);
+        --primary: #ddd92a;
+        --yellow-gradient: linear-gradient(to top, #b9ac1c, #cdca32, #ddd92a);
         --text: #252728;
     }
 
@@ -100,7 +100,7 @@ const globalStyles = css`
         --bg-body: #252728;
         --bg-card: #424b4e;
         --text: #f4f6f5;
-        --primary: #cdca32;
+        --primary: #ddd92a;
     }
 
     html,
