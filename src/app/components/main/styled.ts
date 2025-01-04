@@ -36,6 +36,7 @@ export const Paragraph = styled.p`
     overflow: initial;
     font-weight: 700;
     margin-bottom: 1rem;
+    word-break: keep-all;
 
     /* Tablet and Smaller Desktop */
     ${between('small', 'medium')`

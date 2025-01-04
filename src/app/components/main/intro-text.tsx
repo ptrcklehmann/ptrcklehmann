@@ -35,7 +35,7 @@ export const IntroText = () => {
     return (
         <Intro transition={{ type: 'spring', bounce: 0.25 }}>
             <Paragraph>
-                Hey there, 👋 I&apos;m Patrick Lehmann—a detail-oriented{' '}
+                Hey there, 👋 I&apos;m Patrick Lehmann, a{' '}
                 <HoverPreviewLink
                     href="https://github.com/ptrcklehmann"
                     target="_blank"
@@ -49,20 +49,22 @@ export const IntroText = () => {
                     title="Lehmann's farm"
                     label="rural Brazil"
                 />
-                , currently living in Berlin. I&apos;m your designer&apos;s favorite programmer,
-                bringing over seven years of web development experience and a passion for UX design,
-                AI, and building impactful products.
+                , currently living in Berlin. I thrive in the fast-paced tech landscape, with a
+                passion for UX, AI, and creating meaningful products.
             </Paragraph>
             <Paragraph>
-                These days, I&apos;m crafting innovative features at{' '}
+                At{' '}
                 <HoverPreviewLink
                     href="https://code-b.com/"
                     target="_blank"
                     title="code-b agile websolutions"
                     label="code-b"
                 />
-                , working with React and other hip frameworks. If you fancy a chat, drop me a
-                line—stay bold and have a{' '}
+                , I&apos;m crafting innovative features using React and other cutting-edge
+                frameworks.
+            </Paragraph>
+            <Paragraph>
+                Stay bold and have a{' '}
                 <TypeAnimation speed={25} sequence={scrambleTexts} repeat={Infinity} />
                 <br />
                 {dayname}.
