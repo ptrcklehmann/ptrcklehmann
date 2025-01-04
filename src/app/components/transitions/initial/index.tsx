@@ -1,9 +1,9 @@
 "use client";
-import { AnimatePresence, motion, stagger } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import { Row } from './row';
-import { Backdrop, InitialContainer, Title } from './styled';
+import { Backdrop, InitialContainer } from './styled';
 import { TitleAnimated } from './title';
 
 const rows = [1, 2, 3, 4, 5];

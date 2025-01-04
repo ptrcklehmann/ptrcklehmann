@@ -1,5 +1,3 @@
-import { usePresence } from 'framer-motion';
-import { useEffect } from 'react';
 import { Title } from './styled';
 
 export const TitleAnimated = () => {

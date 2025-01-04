@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-import { between, lessThan } from '@/styles/breakpoints';
+import { lessThan } from '@/styles/breakpoints';
 
 export const InitialContainer = styled(motion.div)`
     position: fixed;
