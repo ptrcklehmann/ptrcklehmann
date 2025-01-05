@@ -37,14 +37,6 @@ export async function generateMetadata(): Promise<Metadata> {
             type: 'website',
             description:
                 'Patrick Lehmann, a creative front-end dev and your designer’s favorite programmer. With 7+ years crafting impactful products. Stay bold and say hi!',
-            images: [
-                {
-                    url: '../assets/images/open-graph-image.png',
-                    width: 1200,
-                    height: 630,
-                    alt: 'Patrick Lehmann',
-                },
-            ],
         },
         robots: {
             index: true,
