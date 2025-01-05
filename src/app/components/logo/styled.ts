@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { between, lessThan } from '@/styles/breakpoints';
 
 export const StyledLogo = styled.svg`
-    fill: url('#linear-yellow');
+    fill: url('#yellow-linear');
     height: 4rem;
 
     /* Tablet and Smaller Desktop */
