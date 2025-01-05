@@ -7,6 +7,7 @@ import { Core } from 'nextjs-darkmode';
 import { GlobalStyles } from '@/styles/global';
 
 import StyledComponentsRegistry from '../lib/registry';
+import media from 'styled-media-query';
 
 const geomanist = localFont({
     src: [
@@ -43,6 +44,10 @@ export async function generateMetadata(): Promise<Metadata> {
             description:
                 'Patrick Lehmann, a creative front-end dev and your designer’s favorite programmer. With 7+ years crafting impactful products. Stay bold and say hi!',
         },
+        themeColor: [
+            { media: '(prefers-color-scheme: dark)', color: '#1a202c' },
+            { media: '(prefers-color-scheme: light)', color: '#f4f6f5' },
+        ],
         robots: {
             index: true,
             follow: true,
