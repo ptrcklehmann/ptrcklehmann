@@ -1,10 +1,10 @@
-"use client";
+'use client';
 import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-import { TitleAnimated } from './title';
-import { LoadingGrid } from './loading-gtid';
+import { LoadingGrid } from './loading-grid';
 import { LoadingScreen } from './styled';
+import { TitleAnimated } from './title';
 
 export const reviewDuration = 1;
 

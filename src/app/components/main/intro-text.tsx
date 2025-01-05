@@ -1,8 +1,9 @@
 "use client";
+import { useMemo } from 'react';
 import { TypeAnimation } from 'react-type-animation';
+
 import { HoverPreviewLink } from '../preview-link';
 import { Intro, Paragraph } from './styled';
-import { useMemo } from 'react';
 
 const scrambleTexts = [
     'magnificent',

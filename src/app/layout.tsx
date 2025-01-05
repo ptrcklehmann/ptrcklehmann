@@ -7,7 +7,6 @@ import { Core } from 'nextjs-darkmode';
 import { GlobalStyles } from '@/styles/global';
 
 import StyledComponentsRegistry from '../lib/registry';
-import media from 'styled-media-query';
 
 const geomanist = localFont({
     src: [

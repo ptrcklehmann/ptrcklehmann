@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Title, TitleContainer, TitleLine } from './styled';
+
+import { TitleContainer, TitleLine } from './styled';
 
 const titleVariants = {
     initial: { y: 100, opacity: 0 },
@@ -9,6 +10,7 @@ const titleVariants = {
         transition: {
             duration: 0.8,
             ease: [0.645, 0.045, 0.355, 1.0],
+            delay: 0.4,
         },
     },
     exit: {

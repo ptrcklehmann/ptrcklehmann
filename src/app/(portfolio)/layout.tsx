@@ -1,6 +1,6 @@
 "use client";
 import { Header } from "../components/header";
-import { InitialTransition } from "../components/transitions/initial";
+import { InitialTransition } from '../components/transitions/loading';
 import { Main } from './styled';
 
 export default function IndexRoute({ children }: { children: React.ReactNode }) {
