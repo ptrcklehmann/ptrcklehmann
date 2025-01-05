@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { useMode } from 'nextjs-darkmode/hooks';
 
-export default function manifest(): MetadataRoute.Manifest {
+export default function useManifest(): MetadataRoute.Manifest {
     const { resolvedMode } = useMode();
 
     const themeColor = resolvedMode === 'dark' ? '#1a202c' : '#f4f6f5';
