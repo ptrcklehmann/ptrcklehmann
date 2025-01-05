@@ -52,7 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
                 'Patrick Lehmann, a creative front-end dev and your designer’s favorite programmer.',
         },
         themeColor: [
-            { media: '(prefers-color-scheme: dark)', color: '#1a202c' },
+            { media: '(prefers-color-scheme: dark)', color: '#252728' },
             { media: '(prefers-color-scheme: light)', color: '#f4f6f5' },
         ],
         robots: {
