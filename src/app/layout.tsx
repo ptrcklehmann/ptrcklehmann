@@ -16,6 +16,11 @@ const geomanist = localFont({
             style: 'normal',
         },
         {
+            path: '../assets/fonts/Geomanist-Medium.woff',
+            weight: '500',
+            style: 'normal',
+        },
+        {
             path: '../assets/fonts/Geomanist-Bold.woff',
             weight: '700',
             style: 'normal',

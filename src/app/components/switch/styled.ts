@@ -40,6 +40,8 @@ export const SwitchSpan = styled.span`
     transform: translateY(-50%);
     font-size: var(--fs-tiny);
     font-family: var(--font-sans);
+    font-weight: 500;
+    line-height: 1;
 
     /* Tablet and Smaller Desktop */
     ${between('small', 'medium')`
