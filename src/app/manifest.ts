@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
+        background_color: '#f4f6f5',
         name: 'Patrick Lehmann',
         short_name: 'Patrick Lehmann',
         description:
@@ -16,5 +17,6 @@ export default function manifest(): MetadataRoute.Manifest {
             },
         ],
         lang: 'en',
+        theme_color: '#f4f6f5',
     };
 }

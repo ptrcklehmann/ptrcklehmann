@@ -39,7 +39,7 @@ export const GridContainer = styled(motion.div)`
     z-index: 2;
     display: flex;
     flex-direction: column;
-    background: var(--bg-body);
+    background: var(--background);
 `;
 
 export const GridItem = styled(motion.div)`
@@ -51,7 +51,7 @@ export const GridItem = styled(motion.div)`
 export const TitleContainer = styled(motion.div)`
     margin: 0;
     overflow: hidden;
-    color: var(--bg-body);
+    color: var(--background);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -119,7 +119,7 @@ export const RowContainer = styled(motion.div)`
 
 export const Backdrop = styled(motion.div)`
     width: 100%;
-    background-color: var(--bg-body);
+    background-color: var(--background);
     position: fixed;
     bottom: 0;
     left: 0;

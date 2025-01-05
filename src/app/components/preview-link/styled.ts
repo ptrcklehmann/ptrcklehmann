@@ -29,7 +29,7 @@ export const PreviewImage = styled.img`
     height: auto;
     margin-bottom: 0.2rem;
     #Ebene_2 > defs > style > .cls-1 {
-        fill: var(--text) !important;
+        fill: var(--foreground) !important;
     }
 `;
 
@@ -40,5 +40,5 @@ export const PreviewUrl = styled.code`
 
 export const PreviewDescription = styled.span`
     font-size: 1rem;
-    color: var(--text);
+    color: var(--foreground);
 `;

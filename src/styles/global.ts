@@ -89,18 +89,18 @@ const globalStyles = css`
         --fs-medium: 3.5rem;
         --fs-large: 4rem;
         --fs-extra-large: 5.5rem;
-        --bg-body: #f4f6f5;
+        --background: #f4f6f5;
         --bg-card: #e4e6e5;
-        --primary: #ddd92a;
-        --yellow-gradient: linear-gradient(to top, #b9ac1c, #cdca32, #ddd92a);
-        --text: #252728;
+        --primary: #f9ee4f;
+        --yellow-gradient: linear-gradient(to top, #d1c841, #ede24a, #f9ee4f);
+        --foreground: #12191f;
     }
 
     [data-rm='dark'] {
-        --bg-body: #252728;
+        --background: #12191f;
         --bg-card: #424b4e;
-        --text: #f4f6f5;
-        --primary: #ddd92a;
+        --foreground: #dbdbdb;
+        --primary: #f9ee4f;
     }
 
     html,
@@ -115,8 +115,8 @@ const globalStyles = css`
 
     body {
         transition: background-color 0.3s ease;
-        background-color: var(--bg-body);
-        color: var(--text);
+        background-color: var(--background);
+        color: var(--foreground);
     }
 
     a {

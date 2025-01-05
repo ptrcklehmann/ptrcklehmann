@@ -10,7 +10,7 @@ export const SwitchButton = styled.button`
     border-radius: 50%;
     position: relative;
     will-change: transform;
-    background-color: var(--text);
+    background-color: var(--foreground);
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     box-shadow: 0px 0px 108px var(--primary), 0px 0px 32.4px var(--primary);
 
@@ -36,7 +36,7 @@ export const SwitchSpan = styled.span`
     left: 0;
     right: 0;
     position: absolute;
-    color: var(--bg-body);
+    color: var(--background);
     transform: translateY(-50%);
     font-size: var(--fs-tiny);
     font-family: var(--font-sans);

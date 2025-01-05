@@ -24,7 +24,7 @@ export const Container = styled.div`
 
 export const Intro = styled(motion.article)`
     position: relative;
-    color: var(--text);
+    color: var(--foreground);
     transition: color 0.3s ease;
     width: 100%;
 `;
