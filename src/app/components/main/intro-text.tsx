@@ -40,8 +40,8 @@ export const IntroText = () => {
                 <HoverPreviewLink
                     href="https://github.com/ptrcklehmann"
                     target="_blank"
-                    title="patrick lehmann's github"
-                    label="front end developer"
+                    title="Patrick Lehmann's github"
+                    label="Full-Stack Developer"
                 />{' '}
                 from{' '}
                 <HoverPreviewLink
@@ -58,7 +58,7 @@ export const IntroText = () => {
                 <HoverPreviewLink
                     href="https://code-b.com/"
                     target="_blank"
-                    title="code-b agile websolutions"
+                    title="code-b agile Websolutions"
                     label="code-b"
                 />
                 , I&apos;m crafting innovative features using React and other cutting-edge
