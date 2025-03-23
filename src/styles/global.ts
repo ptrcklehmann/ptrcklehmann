@@ -91,8 +91,8 @@ const globalStyles = css`
         --fs-extra-large: 5.5rem;
         --background: #f4f6f5;
         --bg-card: #e4e6e5;
-        --primary: #f9ee4f;
-        --yellow-gradient: linear-gradient(to top, #d1c841, #ede24a, #f9ee4f);
+        --primary: #62a760;
+        --yellow-gradient: linear-gradient(to top, #346535, #679d65, #b2cca2);
         --foreground: #12191f;
     }
 
@@ -100,7 +100,7 @@ const globalStyles = css`
         --background: #12191f;
         --bg-card: #424b4e;
         --foreground: #dbdbdb;
-        --primary: #f9ee4f;
+        --primary: #62a760;
     }
 
     html,
