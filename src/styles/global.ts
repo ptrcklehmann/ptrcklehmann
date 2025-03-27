@@ -119,11 +119,6 @@ const globalStyles = css`
     color: var(--foreground);
   }
 
-  a {
-    color: "inherit";
-    text-decoration: none;
-  }
-
   @media (prefers-color-scheme: dark) {
     html {
       color-scheme: dark;
