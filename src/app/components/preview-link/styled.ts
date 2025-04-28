@@ -12,6 +12,26 @@ export const PreviewLink = styled(Link)`
     transition: opacity 0.2s ease-out;
 `;
 
+export const CirclePreview = styled(motion.span)`
+    position: fixed;
+    z-index: 999;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    pointer-events: none;
+    white-space: normal;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+`;
+
 export const LinkPreviewCard = styled(motion.span)`
     position: fixed;
     z-index: 9999;

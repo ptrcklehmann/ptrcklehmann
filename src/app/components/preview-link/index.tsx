@@ -1,7 +1,6 @@
-import React, { MouseEvent, useCallback, useEffect, useState } from 'react';
+import React, { MouseEvent, useState } from 'react';
 
-import { PreviewCard } from './preview-card';
-import { PreviewLink } from './styled';
+import { CirclePreview, PreviewLink } from './styled';
 
 export type LinkPreview = {
     url: string;
@@ -24,27 +23,27 @@ export function HoverPreviewLink({ label, ...props }: HoverPreviewLinkProps) {
     const [state, setState] = useState({
         coords: { x: 0, y: 0 },
         showPreview: false,
-        linkData: null as LinkPreview | null,
+        // linkData: null as LinkPreview | null,
     });
 
-    const fetchLinkData = useCallback(async () => {
-        if (!props.href) return;
+    // const fetchLinkData = useCallback(async () => {
+    //     if (!props.href) return;
 
-        try {
-            const response = await fetch(`/api/link-preview?url=${props.href}`);
-            const data = await response.json();
-            setState(prevState => ({ ...prevState, linkData: data }));
-        } catch (err) {
-            // eslint-disable-next-line no-console
-            console.error('Failed to fetch link preview:', err);
-        }
-    }, [props.href]);
+    //     try {
+    //         const response = await fetch(`/api/link-preview?url=${props.href}`);
+    //         const data = await response.json();
+    //         setState(prevState => ({ ...prevState, linkData: data }));
+    //     } catch (err) {
+    //         // eslint-disable-next-line no-console
+    //         console.error('Failed to fetch link preview:', err);
+    //     }
+    // }, [props.href]);
 
-    useEffect(() => {
-        if (state.showPreview) {
-            fetchLinkData();
-        }
-    }, [fetchLinkData, state.showPreview]);
+    // useEffect(() => {
+    //     if (state.showPreview) {
+    //         fetchLinkData();
+    //     }
+    // }, [fetchLinkData, state.showPreview]);
 
     const handleMouseEnter = () => {
         setState(prevState => ({ ...prevState, showPreview: true }));
@@ -73,7 +72,20 @@ export function HoverPreviewLink({ label, ...props }: HoverPreviewLinkProps) {
             >
                 {label}
             </PreviewLink>
-            {state.showPreview && state.linkData ? <PreviewCard linkPreviewData={state.linkData} coords={state.coords} /> : null}
+            {state.showPreview && (
+                <CirclePreview
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1, x: state.coords.x, y: state.coords.y }}
+                    exit={{ scale: 0, opacity: 0 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    style={{
+                        top: state.coords.y, // Position based on mouse coords
+                        left: state.coords.x,
+                    }}
+                >
+                    {label}
+                </CirclePreview>
+            )}
         </>
     );
 }
