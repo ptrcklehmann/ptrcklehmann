@@ -1,6 +1,5 @@
 import React, { MouseEvent, useCallback, useEffect, useState } from 'react';
 
-import { PreviewBall } from './preview-ball';
 import { PreviewCard } from './preview-card';
 import { PreviewLink } from './styled';
 
