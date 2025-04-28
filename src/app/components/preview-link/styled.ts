@@ -8,7 +8,7 @@ export const PreviewLink = styled(Link)`
     letter-spacing: -0.05rem;
     color: transparent;
     background-clip: text;
-    background-image: var(--yellow-gradient);
+    background-image: var(--green-gradient);
     transition: opacity 0.2s ease-out;
 `;
 
@@ -20,6 +20,19 @@ export const LinkPreviewCard = styled(motion.span)`
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     border-radius: 6px;
     max-width: 300px;
+    display: flex;
+    flex-direction: column;
+`;
+
+export const LinkPreviewBall = styled(motion.span)`
+    position: fixed;
+    z-index: 9999;
+    background-color: var(--bg-card);
+    padding: 0.6rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
 `;

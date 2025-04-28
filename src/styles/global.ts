@@ -92,7 +92,7 @@ const globalStyles = css`
     --background: #f4f6f5;
     --bg-card: #e4e6e5;
     --primary: #62a760;
-    --yellow-gradient: linear-gradient(to top, #346535, #679d65, #b2cca2);
+    --green-gradient: linear-gradient(to top, #346535, #679d65, #b2cca2);
     --foreground: #12191f;
   }
 

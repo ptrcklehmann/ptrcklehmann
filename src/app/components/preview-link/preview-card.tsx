@@ -8,13 +8,13 @@ import {
 } from "./styled";
 
 export const PreviewCard = ({
-  linkData,
-  coords,
+    linkPreviewData,
+    coords,
 }: {
-  linkData: LinkPreview;
-  coords: { x: number; y: number };
+    linkPreviewData: LinkPreview;
+    coords: { x: number; y: number };
 }) => {
-  const { images, title, description } = linkData;
+  const { images, title, description } = linkPreviewData;
   let customTitle = title === 'Google Maps' ? "Lehmann's farm" : title;
   return (
       <LinkPreviewCard

@@ -37,7 +37,7 @@ export const SwitchSpan = styled.span`
     right: 0;
     position: absolute;
     color: var(--background);
-    transform: translateY(-50%);
+    transform: translateY(-45%);
     font-size: var(--fs-tiny);
     font-family: var(--font-sans);
     font-weight: 500;
