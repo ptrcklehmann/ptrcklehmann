@@ -89,18 +89,25 @@ const globalStyles = css`
     --fs-medium: 3.5rem;
     --fs-large: 4rem;
     --fs-extra-large: 5.5rem;
-    --background: #f4f6f5;
-    --bg-card: #e4e6e5;
-    --primary: #62a760;
-    --green-gradient: linear-gradient(to top, #346535, #679d65, #b2cca2);
-    --foreground: #12191f;
+    --background: rgb(244, 246, 245);
+    --bg-card: rgb(228, 230, 229);
+    --primary: rgb(98, 167, 96);
+    --green-gradient: linear-gradient(
+      to top,
+      rgb(52, 101, 53),
+      rgb(103, 157, 101),
+      rgb(178, 204, 162)
+    );
+    --foreground: rgb(18, 25, 31);
+    --accent-foreground: rgb(35, 42, 49);
   }
 
   [data-rm="dark"] {
-    --background: #12191f;
-    --bg-card: #424b4e;
-    --foreground: #dbdbdb;
-    --primary: #62a760;
+    --background: rgb(18, 25, 31);
+    --bg-card: rgb(66, 75, 78);
+    --foreground: rgb(219, 219, 219);
+    --accent-foreground: rgb(228, 230, 229);
+    --primary: rgb(98, 167, 96);
   }
 
   html,
