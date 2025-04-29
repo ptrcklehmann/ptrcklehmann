@@ -76,18 +76,6 @@ export const CursorProvider: React.FC<CursorProviderProps> = ({ children }) => {
         fetchLinkData();
     }, [previewTarget]);
 
-    console.log(
-        'CursorProvider',
-        'coords',
-        coords,
-        'previewTarget',
-        previewTarget,
-        'linkData',
-        linkData,
-        'isHovering',
-        isHovering
-    )
-
     return (
         <CursorContext.Provider
             value={{

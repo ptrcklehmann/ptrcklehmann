@@ -10,7 +10,7 @@ export const PreviewCard = ({
     linkPreviewData: LinkPreview;
     coords: { x: number; y: number };
 }) => {
-    const { favicons } = linkPreviewData;
+    const { favicons, title } = linkPreviewData;
     return (
         <FloatingLinkCard
             style={{
