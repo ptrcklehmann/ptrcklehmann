@@ -4,13 +4,22 @@ import { LinkPreview } from '@/hooks/useCursorContext';
 import { FavIcon, FloatingLinkCard, PreviewTitle } from './styled';
 
 export const PreviewCard = ({
+    label,
     linkPreviewData,
     coords,
 }: {
+    label: string;
     linkPreviewData: LinkPreview;
     coords: { x: number; y: number };
 }) => {
-    const { favicons, title } = linkPreviewData;
+    const { favicons, title, url } = linkPreviewData;
+
+    const customTitle =
+        label === 'drop me a line'
+            ? 'Say Hello'
+            : url.includes('github.com')
+            ? 'GitHub'
+            : title || 'Visit';
     return (
         <FloatingLinkCard
             style={{
@@ -21,8 +30,8 @@ export const PreviewCard = ({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
         >
-            {favicons && favicons[0] ? <FavIcon src={favicons[0]} alt={title} /> : null}
-            <PreviewTitle>Visit</PreviewTitle>
+            {favicons && favicons[0] ? <FavIcon src={favicons[0]} alt={customTitle} /> : null}
+            <PreviewTitle>{customTitle}</PreviewTitle>
         </FloatingLinkCard>
     );
 };

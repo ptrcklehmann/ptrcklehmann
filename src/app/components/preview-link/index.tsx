@@ -13,7 +13,7 @@ export function HoverPreviewLink({ label, ...props }: HoverPreviewLinkProps) {
     const { setPreviewTarget, isHovering, linkData, coords } = useCursorContext();
 
     const handleMouseEnter = () => {
-        if (props.href) {
+        if (props.href && props.href !== 'mailto:connect@ptrcklehmann.com?Subject=Hello') {
             setPreviewTarget(props.href);
         }
     };
@@ -27,7 +27,9 @@ export function HoverPreviewLink({ label, ...props }: HoverPreviewLinkProps) {
             <PreviewLink onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} {...props}>
                 {label}
             </PreviewLink>
-            {isHovering && linkData && <PreviewCard linkPreviewData={linkData} coords={coords} />}
+            {isHovering && linkData && (
+                <PreviewCard label={label} linkPreviewData={linkData} coords={coords} />
+            )}
         </>
     );
 }
