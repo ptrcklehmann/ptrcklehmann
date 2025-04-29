@@ -5,39 +5,30 @@ export const StyledFabLink = styled.a`
     align-items: center;
     justify-content: center;
     position: fixed;
-    bottom: 2rem;
+    bottom: 1rem;
     right: 2rem;
-    height: 2rem;
-    padding: 0 0.5rem;
+    padding: 0.5rem 0.5rem;
     gap: 0.25rem;
     font-weight: 700;
-    font-size: 12px;
+    font-size: var(--fs-tiny);
     line-height: 1;
     white-space: nowrap;
     border-radius: 0.375rem;
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--foreground, #e5e7eb);
-    background-color: rgba(var(--background, 255, 255, 255), 0.9);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-    outline: 2px solid transparent;
-    outline-offset: 2px;
+    border: 1px solid var(--foreground);
+    background-color: var(--background);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    transition: all 0.25s ease-in-out;
     flex-shrink: 0;
-    color: inherit;
+    color: var(--foreground);
 
     & svg {
         pointer-events: none;
-        flex-shrink: 0;
-    }
-
-    & svg:not([class*='size-']) {
         width: 1rem;
         height: 1rem;
     }
 
     &:hover {
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-        transform: translateY(-0.1rem);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        transform: translateY(-1px);
     }
 `;

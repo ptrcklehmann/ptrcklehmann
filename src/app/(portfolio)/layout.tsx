@@ -11,8 +11,10 @@ export default function IndexRoute({ children }: { children: React.ReactNode }) 
         <>
             <InitialTransition />
             <Header />
-            <Main>{children}</Main>
-            <FAB />
+            <Main>
+                {children}
+                <FAB />
+            </Main>
         </>
     );
 }
