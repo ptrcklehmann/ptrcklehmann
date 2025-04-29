@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const PreviewLink = styled.a`
+export const PreviewLink = styled.a.attrs({
+    target: '_blank',
+    rel: 'noopener noreferrer',
+})`
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.05rem;
