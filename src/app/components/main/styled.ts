@@ -13,9 +13,9 @@ export const Main = styled.main`
     `}
 
     /* Mobile */
-    @media (max-width: 700px) {
+    ${lessThan('small')`
         padding: 1.5rem;
-    }
+    `}
 `;
 
 export const Container = styled.div`
@@ -26,7 +26,11 @@ export const Intro = styled(motion.article)`
     position: relative;
     color: var(--foreground);
     transition: color 0.3s ease;
-    width: 100%;
+    width: 80%;
+
+    ${lessThan('medium')`
+        width: 100%;
+    `}
 `;
 
 export const Paragraph = styled.p`

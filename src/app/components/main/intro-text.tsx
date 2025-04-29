@@ -36,48 +36,47 @@ export const IntroText = () => {
     return (
         <Intro transition={{ type: 'spring', bounce: 0.25 }}>
             <Paragraph>
-                Hey there, 👋 I&apos;m Patrick Lehmann—a{' '}
+                Hey, I&apos;m Patrick Lehmann—a{' '}
                 <HoverPreviewLink
                     href="https://github.com/ptrcklehmann"
                     target="_blank"
                     title="Patrick Lehmann's github"
                     label="Full-Stack Developer"
                 />{' '}
-                now based in Berlin (originally from{' '}
+                specializing in React, Next.js, React Native, GraphQL, and TypeScript. Originally
+                from{' '}
                 <HoverPreviewLink
                     href="https://goo.gl/maps/FJqL7jfmUvnJ2Leu9"
                     target="_blank"
                     title="Lehmann's farm"
                     label="rural Brazil"
                 />
-                ). With 5+ years turning ideas into production-ready web & mobile apps, I specialize
-                in React, Next.js, React Native, GraphQL and TypeScript.
+                , I now call Berlin home.
             </Paragraph>
             <Paragraph>
-                After helping launch high-traffic platforms like{' '}
+                I&apos;m passionate about UX, AI, and building meaningful products. I&apos;ve
+                shipped products like{' '}
                 <HoverPreviewLink
                     href="https://thepioneer.de/"
                     target="_blank"
                     title="The Pioneer"
-                    label="The Pioneer"
+                    label="ThePioneer.de"
                 />{' '}
-                (1M+ daily users) and Germany&apos;s fastest-growing{' '}
+                (1M+ daily users) and{' '}
                 <HoverPreviewLink
                     href="https://tabletop-herald.com/"
                     target="_blank"
                     title="Tabletop Herald"
-                    label="tabletop-gaming"
-                />{' '}
-                hub, I thrive on solving tough UX challenges, building test-driven features, and
-                mentoring juniors.{' '}
+                    label="Tabletop Herald"
+                />
+                , created mockups and prototypes, and driven test-first, agile delivery at code-b.
             </Paragraph>
             <Paragraph>
-                When I&apos;m not coding, you&apos;ll find me geeking out over AI experiments,
-                leveling up my dog Ponyo 🐕 on our city walks, or planning my next tent-and-van
-                adventure 🏕️.
+                In my free time, I enjoy tinkering with AI, exploring the city with my dog Ponyo,
+                and planning my next tent-and-van adventure.
             </Paragraph>
             <Paragraph>
-                Let&apos;s build something meaningful—
+                To reach out, just{' '}
                 <HoverPreviewLink
                     href="mailto:connect@ptrcklehmann.com?Subject=Hello"
                     target="_blank"
