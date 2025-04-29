@@ -2,6 +2,7 @@
 
 import { LinkPreview } from '@/hooks/useCursorContext';
 import { FavIcon, FloatingLinkCard, PreviewTitle } from './styled';
+import { useMemo } from 'react';
 
 export const PreviewCard = ({
     label,
@@ -14,12 +15,16 @@ export const PreviewCard = ({
 }) => {
     const { favicons, title, url } = linkPreviewData;
 
-    const customTitle =
-        label === 'drop me a line'
-            ? 'Say Hello'
-            : url.includes('github.com')
-            ? 'GitHub'
-            : title || 'Visit';
+    const customTitle = useMemo(() => {
+        if (label === 'drop me a line') {
+            return 'Say Hello';
+        } else if (url.includes('github.com')) {
+            return 'GitHub';
+        } else {
+            return title || 'Visit';
+        }
+    }, [label, url, title]);
+
     return (
         <FloatingLinkCard
             style={{
