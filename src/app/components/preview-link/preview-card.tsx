@@ -21,7 +21,7 @@ export const PreviewCard = ({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
         >
-            {favicons[0] ? <FavIcon src={favicons[0]} alt={title} /> : null}
+            {favicons && favicons[0] ? <FavIcon src={favicons[0]} alt={title} /> : null}
             <PreviewTitle>Visit</PreviewTitle>
         </FloatingLinkCard>
     );
