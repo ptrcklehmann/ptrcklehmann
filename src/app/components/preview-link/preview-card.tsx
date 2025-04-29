@@ -10,8 +10,7 @@ export const PreviewCard = ({
     linkPreviewData: LinkPreview;
     coords: { x: number; y: number };
 }) => {
-    const { favicons, title } = linkPreviewData;
-    let customTitle = title === '' ? "Lehmann's farm" : title;
+    const { favicons } = linkPreviewData;
     return (
         <FloatingLinkCard
             style={{
@@ -23,7 +22,7 @@ export const PreviewCard = ({
             exit={{ opacity: 0, scale: 0.95 }}
         >
             {favicons[0] ? <FavIcon src={favicons[0]} alt={title} /> : null}
-            <PreviewTitle>{customTitle}</PreviewTitle>
+            <PreviewTitle>Visit</PreviewTitle>
         </FloatingLinkCard>
     );
 };

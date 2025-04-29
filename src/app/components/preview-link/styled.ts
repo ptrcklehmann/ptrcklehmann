@@ -38,8 +38,8 @@ export const FloatingLinkCard = styled(motion.span)`
     padding: 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 50%;
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,6 +68,7 @@ export const FavIcon = styled.img`
 
 export const PreviewTitle = styled.p`
     font-size: var(--fs-tiny);
+    text-align: center;
 `;
 
 export const PreviewDescription = styled.span`
