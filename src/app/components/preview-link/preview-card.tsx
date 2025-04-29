@@ -24,7 +24,7 @@ export const PreviewCard = ({
             exit={{ opacity: 0, scale: 0.95 }}
         >
             {favicons && favicons[0] ? <FavIcon src={favicons[0]} alt={previewText} /> : null}
-            <PreviewTitle>{previewText || 'Say Hello'}</PreviewTitle>
+            <PreviewTitle>{previewText}</PreviewTitle>
         </FloatingLinkCard>
     );
 };
