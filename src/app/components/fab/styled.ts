@@ -10,7 +10,7 @@ export const StyledFabLink = styled.a`
     padding: 0.5rem 0.5rem;
     gap: 0.25rem;
     font-weight: 700;
-    font-size: var(--fs-tiny);
+    font-size: var(--fs-tini-tiny);
     line-height: 1;
     white-space: nowrap;
     border-radius: 0.375rem;

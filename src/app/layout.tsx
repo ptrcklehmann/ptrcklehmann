@@ -9,6 +9,7 @@ import { Core } from 'nextjs-darkmode';
 import { GlobalStyles } from '@/styles/global';
 
 import StyledComponentsRegistry from '../lib/registry';
+import { CursorProvider } from '@/hooks/useCursorContext';
 
 const geomanist = localFont({
     src: [
@@ -73,7 +74,7 @@ export default function RootLayout({
                     <SpeedInsights />
                     <GlobalStyles />
                     <Core />
-                    {children}
+                    <CursorProvider>{children}</CursorProvider>
                 </StyledComponentsRegistry>
             </body>
         </html>

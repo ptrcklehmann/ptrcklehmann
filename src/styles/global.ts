@@ -82,12 +82,12 @@ const globalStyles = css`
       "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
       "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
     --fs-html: 16px;
-    --fs-tini-tiny: 0.6rem;
-    --fs-tiny: 0.8rem;
+    --fs-tini-tiny: 0.8rem;
+    --fs-tiny: 1rem;
     --fs-details: 2rem;
     --fs-small: 2.5rem;
-    --fs-medium: 3.5rem;
-    --fs-large: 4rem;
+    --fs-medium: 3rem;
+    --fs-large: 3.5rem;
     --fs-extra-large: 5.5rem;
     --background: rgb(244, 246, 245);
     --bg-card: rgb(228, 230, 229);

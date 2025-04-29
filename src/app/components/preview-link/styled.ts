@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import styled from 'styled-components';
 
-export const PreviewLink = styled(Link)`
+export const PreviewLink = styled.a`
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.05rem;
@@ -32,16 +31,20 @@ export const CirclePreview = styled(motion.span)`
     transform: translate(-50%, -50%);
 `;
 
-export const LinkPreviewCard = styled(motion.span)`
+export const FloatingLinkCard = styled(motion.span)`
     position: fixed;
     z-index: 9999;
     background-color: var(--bg-card);
     padding: 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    border-radius: 10px;
-    max-width: 300px;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
 `;
 
 export const LinkPreviewBall = styled(motion.span)`
@@ -57,18 +60,14 @@ export const LinkPreviewBall = styled(motion.span)`
     flex-direction: column;
 `;
 
-export const PreviewImage = styled.img`
-    width: 50%;
-    height: auto;
+export const FavIcon = styled.img`
+    width: 1.5rem;
+    height: 1.5rem;
     margin-bottom: 0.2rem;
-    #Ebene_2 > defs > style > .cls-1 {
-        fill: var(--foreground) !important;
-    }
 `;
 
-export const PreviewUrl = styled.code`
-    font-size: 0.8rem;
-    margin-bottom: 0.5rem;
+export const PreviewTitle = styled.p`
+    font-size: var(--fs-tiny);
 `;
 
 export const PreviewDescription = styled.span`

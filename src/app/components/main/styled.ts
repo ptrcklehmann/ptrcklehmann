@@ -1,21 +1,37 @@
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { between, lessThan } from '@/styles/breakpoints';
+
+// Shared style constants
+const commonFont = css`
+    font-family: var(--font-sans);
+    line-height: 1.2;
+    letter-spacing: -0.05rem;
+    overflow: initial;
+`;
+
+const responsiveFontSize = css`
+    ${between('small', 'medium')`
+    font-size: var(--fs-medium);
+  `}
+
+    ${lessThan('small')`
+    font-size: var(--fs-small);
+  `}
+`;
 
 export const Main = styled.main`
     padding: 3.5rem;
     position: relative;
 
-    /* Tablet and Smaller Desktop */
     ${between('small', 'medium')`
-        padding: 2rem;
-    `}
+    padding: 2rem;
+  `}
 
-    /* Mobile */
     ${lessThan('small')`
-        padding: 1.5rem;
-    `}
+    padding: 1.5rem;
+  `}
 `;
 
 export const Container = styled.div`
@@ -29,50 +45,45 @@ export const Intro = styled(motion.article)`
     width: 80%;
 
     ${lessThan('medium')`
-        width: 100%;
-    `}
+    width: 100%;
+  `}
 `;
 
 export const Paragraph = styled.p`
-    font-family: var(--font-sans);
+    ${commonFont}
     font-size: var(--fs-large);
-    line-height: 1.5;
-    overflow: initial;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
     word-break: keep-all;
-
-    /* Tablet and Smaller Desktop */
-    ${between('small', 'medium')`
-        font-size: var(--fs-medium);
-    `}
-
-    /* Mobile */
-    ${lessThan('small')`
-        font-size: var(--fs-small);
-    `}
+    ${responsiveFontSize}
 `;
 
 export const DescriptionShort = styled.div`
     p {
-        font-family: var(--font-sans);
+        ${commonFont}
         font-size: var(--fs-small);
-        line-height: 1.2;
-        letter-spacing: -0.05rem;
-        overflow: initial;
         font-weight: 400;
     }
 
     a {
         font-weight: 700;
         color: var(--primary);
-        line-height: 1.2;
-        letter-spacing: -0.05rem;
         opacity: 0.75;
         transition: opacity 0.2s ease-out;
-    }
 
-    a:hover {
-        opacity: 1;
+        &:hover {
+            opacity: 1;
+        }
     }
+`;
+
+export const AnimatedMessageContainer = styled.p`
+    ${commonFont}
+    margin-top: 4rem;
+    font-size: var(--fs-large);
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+    color: var(--foreground);
+    transition: color 0.3s ease;
+    ${responsiveFontSize}
 `;

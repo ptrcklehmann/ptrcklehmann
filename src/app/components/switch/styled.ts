@@ -38,7 +38,7 @@ export const SwitchSpan = styled.span`
     position: absolute;
     color: var(--background);
     transform: translateY(-45%);
-    font-size: var(--fs-tiny);
+    font-size: var(--fs-tini-tiny);
     font-family: var(--font-sans);
     font-weight: 500;
     line-height: 1;
@@ -50,6 +50,6 @@ export const SwitchSpan = styled.span`
 
     /* Mobile */
     ${lessThan('small')`
-        font-size: var(--fs-tini-tiny);
+        font-size: 0.6rem;
     `}
 `;
