@@ -6,7 +6,7 @@ import { PreviewLink } from './styled';
 
 type HoverPreviewLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
     label: string;
-    previewText: string;
+    previewText?: string;
 };
 
 export function HoverPreviewLink({ label, previewText, ...props }: HoverPreviewLinkProps) {

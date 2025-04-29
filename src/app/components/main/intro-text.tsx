@@ -50,7 +50,6 @@ export const IntroText = () => {
                 <HoverPreviewLink
                     href="mailto:connect@ptrcklehmann.com?Subject=Hello"
                     label="drop me a line"
-                    previewText="Say Hello"
                     title="Email Patrick Lehmann"
                 />
                 .

@@ -8,7 +8,7 @@ export const PreviewCard = ({
     linkPreviewData,
     coords,
 }: {
-    previewText: string;
+    previewText?: string;
     linkPreviewData: LinkPreview;
     coords: { x: number; y: number };
 }) => {
@@ -24,7 +24,7 @@ export const PreviewCard = ({
             exit={{ opacity: 0, scale: 0.95 }}
         >
             {favicons && favicons[0] ? <FavIcon src={favicons[0]} alt={previewText} /> : null}
-            <PreviewTitle>{previewText}</PreviewTitle>
+            <PreviewTitle>{previewText || 'Say Hello'}</PreviewTitle>
         </FloatingLinkCard>
     );
 };
