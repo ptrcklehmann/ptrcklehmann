@@ -36,7 +36,7 @@ export const FloatingLinkCard = styled(motion.span)`
     z-index: 9999;
     background-color: var(--bg-card);
     padding: 1rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     border-radius: 50%;
     width: 100px;
     height: 100px;
