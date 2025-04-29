@@ -2,7 +2,6 @@
 
 import { LinkPreview } from '@/hooks/useCursorContext';
 import { FavIcon, FloatingLinkCard, PreviewTitle } from './styled';
-import { useMemo } from 'react';
 
 export const PreviewCard = ({
     previewText,
@@ -13,7 +12,7 @@ export const PreviewCard = ({
     linkPreviewData: LinkPreview;
     coords: { x: number; y: number };
 }) => {
-    const { favicons, url } = linkPreviewData;
+    const { favicons } = linkPreviewData;
     return (
         <FloatingLinkCard
             style={{
