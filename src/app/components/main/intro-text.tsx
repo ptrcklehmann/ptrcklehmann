@@ -11,6 +11,7 @@ export const IntroText = () => {
                 <HoverPreviewLink
                     href="https://github.com/ptrcklehmann"
                     label="Full-Stack Developer"
+                    previewText="Github"
                 />{' '}
                 specializing in React, Next.js, React Native, GraphQL, and TypeScript.
             </Paragraph>
@@ -19,13 +20,22 @@ export const IntroText = () => {
                 <HoverPreviewLink
                     href="https://maps.app.goo.gl/UTtFW9nr6XrWBMjs5"
                     label="rural Brazil"
+                    previewText="Visit"
                 />{' '}
                 🧑‍🌾, now living in vibrant Berlin. Passionate about UX, AI 🤖, and crafting
                 meaningful products. Previously at code-b, where I shipped projects like{' '}
-                <HoverPreviewLink href="https://thepioneer.de/" label="ThePioneer.de" /> (1M+ daily
-                users) and{' '}
-                <HoverPreviewLink href="https://tabletop-herald.com/" label="Tabletop Herald" />,
-                designed mockups, prototypes, and implemented test-first, agile practices.
+                <HoverPreviewLink
+                    href="https://thepioneer.de/"
+                    label="ThePioneer.de"
+                    previewText="Visit"
+                />{' '}
+                (1M+ daily users) and{' '}
+                <HoverPreviewLink
+                    href="https://tabletop-herald.com/"
+                    label="Tabletop Herald"
+                    previewText="Visit"
+                />
+                , designed mockups, prototypes, and implemented test-first, agile practices.
             </Paragraph>
             <Paragraph>
                 When not coding, you&apos;ll find me exploring the city with my dog Ponyo 🐶 or
@@ -36,6 +46,7 @@ export const IntroText = () => {
                 <HoverPreviewLink
                     href="mailto:connect@ptrcklehmann.com?Subject=Hello"
                     label="drop me a line"
+                    previewText="Say Hello"
                 />
                 .
             </Paragraph>

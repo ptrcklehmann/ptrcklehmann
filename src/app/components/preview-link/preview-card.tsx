@@ -5,26 +5,15 @@ import { FavIcon, FloatingLinkCard, PreviewTitle } from './styled';
 import { useMemo } from 'react';
 
 export const PreviewCard = ({
-    label,
+    previewText,
     linkPreviewData,
     coords,
 }: {
-    label: string;
+    previewText: string;
     linkPreviewData: LinkPreview;
     coords: { x: number; y: number };
 }) => {
-    const { favicons, title, url } = linkPreviewData;
-
-    const customTitle = useMemo(() => {
-        if (label === 'drop me a line') {
-            return 'Say Hello';
-        } else if (url.includes('github.com')) {
-            return 'GitHub';
-        } else {
-            return title || 'Visit';
-        }
-    }, [label, url, title]);
-
+    const { favicons, url } = linkPreviewData;
     return (
         <FloatingLinkCard
             style={{
@@ -35,8 +24,8 @@ export const PreviewCard = ({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
         >
-            {favicons && favicons[0] ? <FavIcon src={favicons[0]} alt={customTitle} /> : null}
-            <PreviewTitle>{customTitle}</PreviewTitle>
+            {favicons && favicons[0] ? <FavIcon src={favicons[0]} alt={previewText} /> : null}
+            <PreviewTitle>{previewText}</PreviewTitle>
         </FloatingLinkCard>
     );
 };

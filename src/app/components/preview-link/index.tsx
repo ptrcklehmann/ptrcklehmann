@@ -3,13 +3,13 @@ import React from 'react';
 import { useCursorContext } from '@/hooks/useCursorContext';
 import { PreviewCard } from './preview-card';
 import { PreviewLink } from './styled';
-import { LinkProps } from 'next/link';
 
 type HoverPreviewLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
     label: string;
+    previewText: string;
 };
 
-export function HoverPreviewLink({ label, ...props }: HoverPreviewLinkProps) {
+export function HoverPreviewLink({ label, previewText, ...props }: HoverPreviewLinkProps) {
     const { setPreviewTarget, isHovering, linkData, coords } = useCursorContext();
 
     const handleMouseEnter = () => {
@@ -28,7 +28,7 @@ export function HoverPreviewLink({ label, ...props }: HoverPreviewLinkProps) {
                 {label}
             </PreviewLink>
             {isHovering && linkData && (
-                <PreviewCard label={label} linkPreviewData={linkData} coords={coords} />
+                <PreviewCard previewText={previewText} linkPreviewData={linkData} coords={coords} />
             )}
         </>
     );
