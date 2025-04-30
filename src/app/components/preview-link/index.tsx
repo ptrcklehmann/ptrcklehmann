@@ -1,6 +1,6 @@
 'use client';
-import { useRef } from 'react';
-import { useTransform, Variants } from 'framer-motion';
+import { useRef, useCallback } from 'react';
+import { SpringOptions, useSpring, Variants } from 'framer-motion';
 import { useCursorContext } from '@/hooks/useCursorContext';
 import { PreviewLink, CirclePreview } from './styled';
 
@@ -8,7 +8,6 @@ interface HoverPreviewLinkProps {
     href: string;
     label: string;
     previewText: string;
-    title?: string;
 }
 
 const variants: Variants = {
@@ -28,7 +27,11 @@ const variants: Variants = {
     },
 };
 
-export const HoverPreviewLink = ({ href, label, previewText, title }: HoverPreviewLinkProps) => {
+const springConfig: SpringOptions = {
+    bounce: 0.04,
+};
+
+export const HoverPreviewLink = ({ href, label, previewText }: HoverPreviewLinkProps) => {
     const {
         x,
         y,
@@ -39,20 +42,21 @@ export const HoverPreviewLink = ({ href, label, previewText, title }: HoverPrevi
         animatePreviewVariant,
         animatePreview,
     } = useCursorContext();
+
     const ref = useRef<HTMLAnchorElement>(null);
 
-    // // Create derived motion values for the preview position
-    const previewX = useTransform(x, latest => latest);
-    const previewY = useTransform(y, latest => latest);
+    // Use `useTransform` only if necessary for additional transformations
+    const previewX = useSpring(x, springConfig);
+    const previewY = useSpring(y, springConfig);
 
     const isCurrentTarget = previewTarget === href;
 
-    const handleMouseEnter = () => {
+    const handleMouseEnter = useCallback(() => {
         setPreviewTarget(href);
         animatePreview('cursorEnter');
-    };
+    }, [href, setPreviewTarget, animatePreview]);
 
-    const handleMouseLeave = () => {
+    const handleMouseLeave = useCallback(() => {
         animatePreview('cursorLeave');
         const timeoutId = setTimeout(() => {
             if (previewTarget === href) {
@@ -60,7 +64,7 @@ export const HoverPreviewLink = ({ href, label, previewText, title }: HoverPrevi
             }
         }, 200);
         return () => clearTimeout(timeoutId);
-    };
+    }, [href, previewTarget, setPreviewTarget, animatePreview]);
 
     return (
         <>
@@ -69,23 +73,22 @@ export const HoverPreviewLink = ({ href, label, previewText, title }: HoverPrevi
                 href={href}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                title={title}
             >
                 {label}
-                {isHovering && isCurrentTarget ? (
-                    <CirclePreview
-                        style={{
-                            left: previewX,
-                            top: previewY,
-                        }}
-                        variants={variants}
-                        initial={initialPreviewVariant}
-                        animate={animatePreviewVariant}
-                    >
-                        {previewText}
-                    </CirclePreview>
-                ) : null}
             </PreviewLink>
+            {isHovering && isCurrentTarget && (
+                <CirclePreview
+                    style={{
+                        left: previewX,
+                        top: previewY,
+                    }}
+                    variants={variants}
+                    initial={initialPreviewVariant}
+                    animate={animatePreviewVariant}
+                >
+                    {previewText}
+                </CirclePreview>
+            )}
         </>
     );
 };
