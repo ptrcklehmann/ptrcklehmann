@@ -7,7 +7,7 @@ export const IntroText = () => {
     return (
         <Intro transition={{ type: 'spring', bounce: 0.25 }}>
             <Paragraph>
-                Hello, I&apos;m Patrick Lehmann 👋, <br />a{' '}
+                Hello, I&apos;m Patrick Lehmann, <br />a{' '}
                 <HoverPreviewLink
                     href="https://github.com/ptrcklehmann"
                     label="Full-Stack Developer"
@@ -19,13 +19,13 @@ export const IntroText = () => {
             <Paragraph>
                 Originally from{' '}
                 <HoverPreviewLink
-                    href="https://maps.app.goo.gl/UTtFW9nr6XrWBMjs5"
+                    href="https://maps.app.goo.gl/L8s5TQjZ3xZ4LH2d6"
                     label="rural Brazil"
                     previewText="Visit"
                     title="Sítio Pieper Lehmann, Itueta, Brazil"
                 />{' '}
-                🧑‍🌾, now living in vibrant Berlin. Passionate about UX, AI 🤖, and crafting
-                meaningful products. Previously at code-b, where I shipped projects like{' '}
+                , now living in vibrant Berlin. Passionate about UX, AI, and crafting meaningful
+                products. Previously at code-b, where I shipped projects like{' '}
                 <HoverPreviewLink
                     href="https://thepioneer.de/"
                     label="ThePioneer.de"
@@ -42,8 +42,8 @@ export const IntroText = () => {
                 , designed mockups, prototypes, and implemented test-first, agile practices.
             </Paragraph>
             <Paragraph>
-                When not coding, you&apos;ll find me exploring the city with my dog Ponyo 🐶 or
-                planning our next tent-and-van adventure 🏕️🚐.
+                When not coding, you&apos;ll find me exploring the city with my dog Ponyo or
+                planning our next tent-and-van adventure.
             </Paragraph>
             <Paragraph>
                 Want to connect? Just{' '}
@@ -51,6 +51,7 @@ export const IntroText = () => {
                     href="mailto:connect@ptrcklehmann.com?Subject=Hello"
                     label="drop me a line"
                     title="Email Patrick Lehmann"
+                    previewText="Say Hello"
                 />
                 .
             </Paragraph>

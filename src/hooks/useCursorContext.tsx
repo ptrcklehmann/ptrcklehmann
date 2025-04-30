@@ -1,93 +1,86 @@
 "use client";
-import React, { createContext, useState, useContext, useCallback, useEffect, ReactNode } from 'react';
+import React, {
+  createContext,
+  useState,
+  useContext,
+  ReactNode,
+  useEffect,
+} from "react";
+import { useMotionValue, MotionValue } from "framer-motion";
+import { CIRCLE_PREVIEW_RADIUS } from "@/lib/constants";
 
-export type LinkPreview = {
-    url: string;
-    title: string;
-    siteName: string;
-    description: string;
-    images: string[];
-    mediaType: string;
-    contentType: string;
-    charset: string;
-    videos: string[];
-    favicons: string[];
-};
+export type PreviewVariant = "" | "cursorEnter" | "cursorLeave";
 
 type CursorContextType = {
-    coords: { x: number; y: number };
-    setCoords: (coords: { x: number; y: number }) => void;
-    previewTarget: string | null;
-    setPreviewTarget: (url: string | null) => void;
-    linkData: LinkPreview | null;
-    isHovering: boolean;
+  x: MotionValue<number>;
+  y: MotionValue<number>;
+  previewTarget: string | null;
+  setPreviewTarget: (url: string | null) => void;
+  isHovering: boolean;
+  initialPreviewVariant: PreviewVariant;
+  setInitialPreviewVariant: (variant: PreviewVariant) => void;
+  animatePreviewVariant: PreviewVariant;
+  setAnimatePreviewVariant: (variant: PreviewVariant) => void;
+  animatePreview: (variant: PreviewVariant) => void;
 };
 
 const CursorContext = createContext<CursorContextType | undefined>(undefined);
 
 export const useCursorContext = () => {
-    const context = useContext(CursorContext);
-    if (!context) {
-        throw new Error('useCursorContext must be used within a CursorProvider');
-    }
-    return context;
+  const context = useContext(CursorContext);
+  if (!context) {
+    throw new Error("useCursorContext must be used within a CursorProvider");
+  }
+  return context;
 };
 
 interface CursorProviderProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export const CursorProvider: React.FC<CursorProviderProps> = ({ children }) => {
-    const [coords, setCoords] = useState({ x: 0, y: 0 });
-    const [previewTarget, setPreviewTarget] = useState<string | null>(null);
-    const [linkData, setLinkData] = useState<LinkPreview | null>(null);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const [previewTarget, setPreviewTarget] = useState<string | null>(null);
+  const [initialPreviewVariant, setInitialPreviewVariant] =
+    useState<PreviewVariant>("");
+  const [animatePreviewVariant, setAnimatePreviewVariant] =
+    useState<PreviewVariant>("cursorEnter");
 
-    const isHovering = Boolean(previewTarget);
+  const isHovering = Boolean(previewTarget);
 
-    // Track mouse position globally
-    useEffect(() => {
-        const handleMouseMove = (e: MouseEvent) => {
-            setCoords({ x: e.clientX, y: e.clientY });
-        };
+  const animatePreview = (variant: PreviewVariant) => {
+    setInitialPreviewVariant(animatePreviewVariant);
+    setAnimatePreviewVariant(variant);
+  };
 
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
-    }, []);
+  // Track mouse position globally
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      x.set(e.clientX - CIRCLE_PREVIEW_RADIUS);
+      y.set(e.clientY - CIRCLE_PREVIEW_RADIUS);
+    };
 
-    // Fetch link data when hovering
-    useEffect(() => {
-        if (!previewTarget) {
-            setLinkData(null);
-            return;
-        }
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [x, y]);
 
-        const fetchLinkData = async () => {
-            try {
-                const response = await fetch(`/api/link-preview?url=${previewTarget}`);
-                const data = await response.json();
-                setLinkData(data);
-            } catch (err) {
-                // eslint-disable-next-line no-console
-                console.error('Failed to fetch link preview:', err);
-                setLinkData(null);
-            }
-        };
-
-        fetchLinkData();
-    }, [previewTarget]);
-
-    return (
-        <CursorContext.Provider
-            value={{
-                coords,
-                setCoords,
-                previewTarget,
-                setPreviewTarget,
-                linkData,
-                isHovering
-            }}
-        >
-            {children}
-        </CursorContext.Provider>
-    );
+  return (
+    <CursorContext.Provider
+      value={{
+        x,
+        y,
+        previewTarget,
+        setPreviewTarget,
+        isHovering,
+        initialPreviewVariant,
+        setInitialPreviewVariant,
+        animatePreviewVariant,
+        setAnimatePreviewVariant,
+        animatePreview,
+      }}
+    >
+      {children}
+    </CursorContext.Provider>
+  );
 };

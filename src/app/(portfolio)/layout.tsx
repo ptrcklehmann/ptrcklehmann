@@ -1,4 +1,5 @@
-"use client";
+'use client';
+import { CursorProvider } from '@/hooks/useCursorContext';
 import '../../app/globals.css';
 
 import { FAB } from '../components/fab';
@@ -8,13 +9,13 @@ import { Main } from './styled';
 
 export default function IndexRoute({ children }: { children: React.ReactNode }) {
     return (
-        <>
+        <CursorProvider>
             <InitialTransition />
             <Header />
             <Main>
                 {children}
                 <FAB />
             </Main>
-        </>
+        </CursorProvider>
     );
 }

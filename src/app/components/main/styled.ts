@@ -50,6 +50,7 @@ export const Intro = styled(motion.article)`
 `;
 
 export const Paragraph = styled.p`
+    position: relative;
     ${commonFont}
     font-size: var(--fs-large);
     font-weight: 700;

@@ -13,5 +13,4 @@ export const BREAKPOINTS = {
 };
 export type BreakpointString = "extrasmall" | "small" | "medium" | "large";
 
-export const { between, greaterThan, lessThan } =
-  generateMedia<any>(BREAKPOINTS);
+export const { between, greaterThan, lessThan } = generateMedia(BREAKPOINTS);
