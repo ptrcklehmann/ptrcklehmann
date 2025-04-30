@@ -12,7 +12,6 @@ export const IntroText = () => {
                     href="https://github.com/ptrcklehmann"
                     label="Full-Stack Developer"
                     previewText="Github"
-                    title="Patrick Lehmann on Github"
                 />{' '}
                 specializing in React, Next.js, React Native, GraphQL, and TypeScript.
             </Paragraph>
@@ -22,7 +21,6 @@ export const IntroText = () => {
                     href="https://maps.app.goo.gl/7yt2ZzMfwrcd53PAA"
                     label="rural Brazil"
                     previewText="Travel"
-                    title="Sítio Pieper Lehmann, Itueta, Brazil"
                 />{' '}
                 , now living in vibrant Berlin. Passionate about UX, AI, and crafting meaningful
                 products. Previously at code-b, where I shipped projects like{' '}
@@ -30,14 +28,12 @@ export const IntroText = () => {
                     href="https://thepioneer.de/"
                     label="ThePioneer.de"
                     previewText="Visit"
-                    title="ThePioneer.de"
                 />{' '}
                 (1M+ daily users) and{' '}
                 <HoverPreviewLink
                     href="https://tabletop-herald.com/"
                     label="Tabletop Herald"
                     previewText="Visit"
-                    title="Tabletop Herald"
                 />
                 , designed mockups, prototypes, and implemented test-first, agile practices.
             </Paragraph>
@@ -50,7 +46,6 @@ export const IntroText = () => {
                 <HoverPreviewLink
                     href="mailto:connect@ptrcklehmann.com?Subject=Hello"
                     label="drop me a line"
-                    title="Email Patrick Lehmann"
                     previewText="Say Hello"
                 />
                 .
