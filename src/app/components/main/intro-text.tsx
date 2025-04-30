@@ -19,9 +19,9 @@ export const IntroText = () => {
             <Paragraph>
                 Originally from{' '}
                 <HoverPreviewLink
-                    href="https://maps.app.goo.gl/L8s5TQjZ3xZ4LH2d6"
+                    href="https://maps.app.goo.gl/7yt2ZzMfwrcd53PAA"
                     label="rural Brazil"
-                    previewText="Visit"
+                    previewText="Travel"
                     title="Sítio Pieper Lehmann, Itueta, Brazil"
                 />{' '}
                 , now living in vibrant Berlin. Passionate about UX, AI, and crafting meaningful
