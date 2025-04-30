@@ -21,7 +21,7 @@ export const IntroText = () => {
                     href="https://maps.app.goo.gl/7yt2ZzMfwrcd53PAA"
                     label="rural Brazil"
                     previewText="Travel"
-                />{' '}
+                />
                 , now living in vibrant Berlin. Passionate about UX, AI, and crafting meaningful
                 products. Previously at code-b, where I shipped projects like{' '}
                 <HoverPreviewLink
@@ -29,7 +29,7 @@ export const IntroText = () => {
                     label="ThePioneer.de"
                     previewText="Visit"
                 />{' '}
-                (1M+ daily users) and{' '}
+                and{' '}
                 <HoverPreviewLink
                     href="https://tabletop-herald.com/"
                     label="Tabletop Herald"
