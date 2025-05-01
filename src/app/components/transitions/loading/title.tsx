@@ -17,7 +17,7 @@ const titleVariants = {
         y: -100,
         opacity: 0,
         transition: {
-            duration: 0.5,
+            duration: 0.3,
         },
     },
 };

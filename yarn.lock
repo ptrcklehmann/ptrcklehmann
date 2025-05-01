@@ -2389,6 +2389,11 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
+next-plugin-styled-components@^1.0.1-next.0:
+  version "1.0.1-next.0"
+  resolved "https://registry.yarnpkg.com/next-plugin-styled-components/-/next-plugin-styled-components-1.0.1-next.0.tgz#52c7195665999983cec336cf2425992c6fa4afd3"
+  integrity sha512-Xd6DEamGsec3fOQq84WiR/jM/gOiwXnm2sclhxGf14n8RofnoqCXBHnx05MjTo5ndfb2iK3Ilo2dJCuQa5kL/Q==
+
 next-themes@^0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/next-themes/-/next-themes-0.3.0.tgz#b4d2a866137a67d42564b07f3a3e720e2ff3871a"

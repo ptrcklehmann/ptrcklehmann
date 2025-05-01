@@ -17,17 +17,7 @@ export const AnimatedMessage = () => {
     return (
         <AnimatedMessageContainer>
             Stay bold and have a{' '}
-            <TypeAnimation
-                style={{
-                    letterSpacing: '-0.05rem',
-                    color: 'transparent',
-                    backgroundClip: 'text',
-                    backgroundImage: 'var(--green-gradient)',
-                }}
-                speed={25}
-                sequence={scrambleTexts}
-                repeat={Infinity}
-            />
+            <TypeAnimation speed={25} sequence={scrambleTexts} repeat={Infinity} />
             <br />
             {dayname}.
         </AnimatedMessageContainer>
