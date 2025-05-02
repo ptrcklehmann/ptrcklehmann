@@ -2,7 +2,6 @@ import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { Core } from 'nextjs-darkmode';
 
@@ -31,33 +30,7 @@ const geomanist = localFont({
     variable: '--geomanist' as const,
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-    return {
-        title: 'Patrick Lehmann',
-        description:
-            'Patrick Lehmann, a creative front-end dev and your designer’s favorite programmer. With 7+ years crafting impactful products. Stay bold and say hi!',
-        category: 'development',
-        openGraph: {
-            title: 'Patrick Lehmann',
-            siteName: 'Patrick Lehmann',
-            url: 'https://ptrcklehmann.com',
-            type: 'website',
-            description:
-                'Patrick Lehmann, a creative front-end dev and your designer’s favorite programmer. With 7+ years crafting impactful products. Stay bold and say hi!',
-        },
-        twitter: {
-            creator: '@patrico',
-            site: '@patrico',
-            title: 'Patrick Lehmann',
-            description:
-                'Patrick Lehmann, a creative front-end dev and your designer’s favorite programmer.',
-        },
-        robots: {
-            index: true,
-            follow: true,
-        },
-    };
-}
+
 
 export default function RootLayout({
     children,

@@ -1,3 +1,4 @@
+'use client';
 import styled from 'styled-components';
 
 import { between, lessThan } from '@/styles/breakpoints';
