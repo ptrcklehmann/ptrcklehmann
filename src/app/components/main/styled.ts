@@ -6,19 +6,19 @@ import { between, lessThan } from '@/styles/breakpoints';
 // Shared style constants
 const commonFont = css`
     font-family: var(--font-sans);
-    line-height: 1.2;
+    line-height: 1.3;
     letter-spacing: -0.05rem;
     overflow: initial;
 `;
 
 const responsiveFontSize = css`
     ${between('small', 'medium')`
-    font-size: var(--fs-medium);
-  `}
+      font-size: var(--fs-medium);
+    `}
 
     ${lessThan('small')`
-    font-size: var(--fs-small);
-  `}
+      font-size: var(--fs-small);
+    `}
 `;
 
 export const Main = styled.main`
@@ -87,4 +87,11 @@ export const AnimatedMessageContainer = styled.p`
     color: var(--foreground);
     transition: color 0.3s ease;
     ${responsiveFontSize}
+`;
+
+export const DesktopHiddenBr = styled.br`
+    display: none;
+    ${lessThan('small')`
+        display: block;
+    `}
 `;

@@ -1,11 +1,20 @@
 import { useMemo } from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import { AnimatedMessageContainer } from './styled';
+import { AnimatedMessageContainer, DesktopHiddenBr } from './styled';
 
 const adjectives = [
-    'magnificent', 'terrific', 'incredible', 'wonderful',
-    'superb', 'delightful', 'awesome', 'fantastic',
-    'magical', 'great', 'legendary', 'funky'
+    'magnificent',
+    'terrific',
+    'incredible',
+    'wonderful',
+    'superb',
+    'delightful',
+    'awesome',
+    'fantastic',
+    'magical',
+    'great',
+    'legendary',
+    'funky',
 ];
 const scrambleTexts = adjectives.flatMap(item => [item, 1800]);
 
@@ -16,7 +25,7 @@ export const AnimatedMessage = () => {
 
     return (
         <AnimatedMessageContainer>
-            Stay bold and have a{' '}
+            Stay bold and have a <DesktopHiddenBr />
             <TypeAnimation speed={25} sequence={scrambleTexts} repeat={Infinity} />
             <br />
             {dayname}.

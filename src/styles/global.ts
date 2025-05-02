@@ -85,7 +85,7 @@ const globalStyles = css`
     --fs-tini-tiny: 0.8rem;
     --fs-tiny: 1rem;
     --fs-details: 2rem;
-    --fs-small: 2.5rem;
+    --fs-small: 2.2rem;
     --fs-medium: 3rem;
     --fs-large: 3.5rem;
     --fs-extra-large: 5.5rem;
