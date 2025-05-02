@@ -1,3 +1,4 @@
+import { between, lessThan } from '@/styles/breakpoints';
 import styled from 'styled-components';
 
 export const StyledFabLink = styled.a`
@@ -5,7 +6,7 @@ export const StyledFabLink = styled.a`
     align-items: center;
     justify-content: center;
     position: fixed;
-    bottom: 1rem;
+    bottom: 1.5rem;
     right: 2rem;
     padding: 0.5rem 0.5rem;
     gap: 0.25rem;
@@ -20,6 +21,18 @@ export const StyledFabLink = styled.a`
     transition: all 0.25s ease-in-out;
     flex-shrink: 0;
     color: var(--foreground);
+
+    /* Tablet and Smaller Desktop */
+    ${between('small', 'medium')`
+        bottom: 2rem;
+        right: 2rem;
+    `}
+
+    /* Mobile */
+    ${lessThan('small')`
+        bottom: 1.5rem;
+        right: 1.5rem;
+    `}
 
     & svg {
         pointer-events: none;
