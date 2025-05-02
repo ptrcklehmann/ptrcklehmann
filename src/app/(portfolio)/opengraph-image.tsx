@@ -60,7 +60,7 @@ export default async function Image() {
                             fontSize: '3rem',
                             fontWeight: '400',
                             textTransform: 'uppercase',
-                            color: 'rgb(18, 25, 31)',
+                            color: '#12191f',
                             marginBottom: '0.5rem',
                         }}
                     >
@@ -69,9 +69,8 @@ export default async function Image() {
                     <div
                         style={{
                             fontSize: '2rem',
-                            color: 'rgb(66, 75, 78)',
+                            color: '#373f41',
                             maxWidth: '600px',
-                            lineHeight: '1.5',
                         }}
                     >
                         {RESUME_OG_DATA.about}
@@ -83,7 +82,7 @@ export default async function Image() {
                             gap: '1rem',
                         }}
                     >
-                        <div style={{ fontSize: '1.5rem', color: 'rgb(66, 75, 78)' }}>
+                        <div style={{ fontSize: '1.5rem', color: '#373f41' }}>
                             {RESUME_OG_DATA.personalWebsiteUrl.slice(8)}
                         </div>
                     </div>
