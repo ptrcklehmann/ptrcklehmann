@@ -19,9 +19,9 @@ export const size = {
 };
 
 export default async function Image() {
-  const fontData = await fetch(new URL('../../assets/fonts/Geomanist-Medium.woff', import.meta.url)).then(
-      res => res.arrayBuffer(),
-  );
+  const fontData = await fetch(
+      new URL('../assets/fonts/Geomanist-Medium.woff', import.meta.url),
+  ).then(res => res.arrayBuffer());
   return new ImageResponse(
       (
           <div
