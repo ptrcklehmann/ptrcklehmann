@@ -3,7 +3,7 @@ const config = {
   compiler: {
     styledComponents: true,
   },
-  webpack: (config, { isServer }) => {
+  webpack: (config, { _isServer }) => {
     // Add a rule to handle .md files
     config.module.rules.push({
       test: /\.md$/,
