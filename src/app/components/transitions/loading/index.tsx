@@ -6,8 +6,6 @@ import { LoadingGrid } from './loading-grid';
 import { LoadingScreen } from './styled';
 import { TitleAnimated } from './title';
 
-export const reviewDuration = 1;
-
 export const InitialTransition = () => {
     const [isVisible, setIsVisible] = useState(true);
 

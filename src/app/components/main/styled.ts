@@ -34,10 +34,6 @@ export const Main = styled.main`
   `}
 `;
 
-export const Container = styled.div`
-    display: flex;
-`;
-
 export const Intro = styled(motion.article)`
     position: relative;
     color: var(--foreground);
@@ -57,25 +53,6 @@ export const Paragraph = styled.p`
     margin-bottom: 1.6rem;
     word-break: keep-all;
     ${responsiveFontSize}
-`;
-
-export const DescriptionShort = styled.div`
-    p {
-        ${commonFont}
-        font-size: var(--fs-small);
-        font-weight: 400;
-    }
-
-    a {
-        font-weight: 700;
-        color: var(--primary);
-        opacity: 0.75;
-        transition: opacity 0.2s ease-out;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
 `;
 
 export const AnimatedMessageContainer = styled.p`
