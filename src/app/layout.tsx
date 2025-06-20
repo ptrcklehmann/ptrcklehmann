@@ -41,11 +41,11 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
             <body className={geomanist.className}>
                 <StyledComponentsRegistry>
-                    <Analytics />
-                    <SpeedInsights />
                     <GlobalStyles />
                     <Core />
                     {children}
+                    <Analytics />
+                    <SpeedInsights />
                 </StyledComponentsRegistry>
             </body>
         </html>
