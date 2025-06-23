@@ -2,7 +2,7 @@
 import { useState, MouseEvent } from 'react';
 import { useMotionValue, useSpring, AnimatePresence } from 'framer-motion';
 
-import { CirclePreview, PreviewLink } from './styled';
+import { FloatingCirclePreview, GradientTextLink } from './styled';
 import { CIRCLE_PREVIEW_RADIUS } from '@/lib/constants';
 
 interface HoverPreviewLinkProps {
@@ -11,7 +11,7 @@ interface HoverPreviewLinkProps {
     previewText: string;
 }
 
-export const HoverPreviewLink = ({ href, label, previewText }: HoverPreviewLinkProps) => {
+export const InteractivePreviewLink = ({ href, label, previewText }: HoverPreviewLinkProps) => {
     const [isHovering, setIsHovering] = useState(false);
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -26,17 +26,17 @@ export const HoverPreviewLink = ({ href, label, previewText }: HoverPreviewLinkP
 
     return (
         <>
-            <PreviewLink
+            <GradientTextLink
                 href={href}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
             >
                 {label}
-            </PreviewLink>
+            </GradientTextLink>
             <AnimatePresence>
                 {isHovering && (
-                    <CirclePreview
+                    <FloatingCirclePreview
                         style={{
                             left: springX,
                             top: springY,
@@ -47,7 +47,7 @@ export const HoverPreviewLink = ({ href, label, previewText }: HoverPreviewLinkP
                         transition={{ duration: 0.2 }}
                     >
                         {previewText}
-                    </CirclePreview>
+                    </FloatingCirclePreview>
                 )}
             </AnimatePresence>
         </>

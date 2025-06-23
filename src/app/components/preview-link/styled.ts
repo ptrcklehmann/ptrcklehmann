@@ -3,7 +3,7 @@ import { CIRCLE_PREVIEW_SIZE } from '@/lib/constants';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const PreviewLink = styled(motion.a).attrs({
+export const GradientTextLink = styled(motion.a).attrs({
     target: '_blank',
     rel: 'noopener noreferrer',
 })`
@@ -18,7 +18,7 @@ export const PreviewLink = styled(motion.a).attrs({
     transition: opacity 0.2s ease-out;
 `;
 
-export const CirclePreview = styled(motion.span)`
+export const FloatingCirclePreview = styled(motion.span)`
     position: fixed;
     z-index: 999;
     width: ${CIRCLE_PREVIEW_SIZE}px;

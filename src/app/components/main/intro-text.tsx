@@ -1,5 +1,5 @@
 'use client';
-import { HoverPreviewLink } from '../preview-link';
+import { InteractivePreviewLink } from '../preview-link';
 import { Intro, Paragraph } from './styled';
 import { AnimatedMessage } from './animated-message';
 
@@ -8,7 +8,7 @@ export const IntroText = () => {
         <Intro transition={{ type: 'spring', bounce: 0.25 }}>
             <Paragraph>
                 Hello, I&apos;m Patrick Lehmann, <br />a{' '}
-                <HoverPreviewLink
+                <InteractivePreviewLink
                     href="https://github.com/ptrcklehmann"
                     label="Full-Stack Developer"
                     previewText="Github"
@@ -17,20 +17,20 @@ export const IntroText = () => {
             </Paragraph>
             <Paragraph>
                 Originally from{' '}
-                <HoverPreviewLink
+                <InteractivePreviewLink
                     href="https://maps.app.goo.gl/7yt2ZzMfwrcd53PAA"
                     label="rural Brazil"
                     previewText="Travel"
                 />
                 , now living in vibrant Berlin. Passionate about UX, AI, and crafting meaningful
                 products. Previously at code-b, where I shipped projects like{' '}
-                <HoverPreviewLink
+                <InteractivePreviewLink
                     href="https://thepioneer.de/"
                     label="ThePioneer.de"
                     previewText="Visit"
                 />{' '}
                 and{' '}
-                <HoverPreviewLink
+                <InteractivePreviewLink
                     href="https://tabletop-herald.com/"
                     label="Tabletop Herald"
                     previewText="Visit"
@@ -43,7 +43,7 @@ export const IntroText = () => {
             </Paragraph>
             <Paragraph>
                 Want to connect? Just{' '}
-                <HoverPreviewLink
+                <InteractivePreviewLink
                     href="mailto:connect@ptrcklehmann.com?Subject=Hello"
                     label="drop me a line"
                     previewText="Say Hello"
