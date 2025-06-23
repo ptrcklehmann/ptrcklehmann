@@ -1,5 +1,5 @@
 'use client';
-import { useState, MouseEvent } from 'react';
+import { useState, MouseEvent, ReactNode } from 'react';
 import { useMotionValue, useSpring, AnimatePresence } from 'framer-motion';
 
 import { FloatingCirclePreview, GradientTextLink } from './styled';
@@ -8,7 +8,7 @@ import { CIRCLE_PREVIEW_RADIUS } from '@/lib/constants';
 interface HoverPreviewLinkProps {
     href: string;
     label: string;
-    previewText: string;
+    previewText: ReactNode;
 }
 
 export const InteractivePreviewLink = ({ href, label, previewText }: HoverPreviewLinkProps) => {
