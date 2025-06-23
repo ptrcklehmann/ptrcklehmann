@@ -90,7 +90,7 @@ const globalStyles = css`
     --fs-large: 3.5rem;
     --fs-extra-large: 5.5rem;
     --background: rgb(244, 246, 245);
-    --bg-card: rgb(228, 230, 229);
+    --bg-card: rgb(232, 235, 233);
     --primary: rgb(98, 167, 96);
     --green-gradient: linear-gradient(
       to top,

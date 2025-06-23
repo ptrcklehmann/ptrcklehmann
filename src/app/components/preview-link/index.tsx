@@ -20,8 +20,9 @@ export const InteractivePreviewLink = ({ href, label, previewText }: HoverPrevie
     const springY = useSpring(mouseY, { damping: 25, stiffness: 300 });
 
     const handleMouseMove = (e: MouseEvent) => {
-        mouseX.set(e.clientX - CIRCLE_PREVIEW_RADIUS);
-        mouseY.set(e.clientY - CIRCLE_PREVIEW_RADIUS);
+        const { clientX, clientY } = e;
+        mouseX.set(clientX - CIRCLE_PREVIEW_RADIUS);
+        mouseY.set(clientY - CIRCLE_PREVIEW_RADIUS);
     };
 
     return (
@@ -44,7 +45,7 @@ export const InteractivePreviewLink = ({ href, label, previewText }: HoverPrevie
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.8, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
+                        transition={{ duration: 0.25, delay: 0.2 }}
                     >
                         {previewText}
                     </FloatingCirclePreview>

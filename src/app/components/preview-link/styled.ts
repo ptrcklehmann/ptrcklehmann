@@ -29,7 +29,7 @@ export const FloatingCirclePreview = styled(motion.span)`
     justify-content: center;
     padding: 0.5rem;
     background-color: var(--bg-card);
-    color: var(--foreground);
+    color: var(--primary);
     text-align: center;
     font-size: 1.5rem;
     pointer-events: none;
