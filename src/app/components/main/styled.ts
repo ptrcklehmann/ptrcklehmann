@@ -21,7 +21,9 @@ const responsiveFontSize = css`
     `}
 `;
 
-export const Main = styled.main`
+export const Main = styled('main').attrs({
+    role: 'main',
+})`
     padding: 3.5rem;
     position: relative;
 
