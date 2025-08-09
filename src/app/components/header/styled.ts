@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 import { between, lessThan } from '@/styles/breakpoints';
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled('header').attrs({
+    'role': 'banner',
+    'aria-hidden': 'true',
+})`
     display: flex;
     justify-content: space-between;
     padding: 3.5rem 3.5rem 0;

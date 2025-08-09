@@ -21,21 +21,6 @@ const responsiveFontSize = css`
     `}
 `;
 
-export const Main = styled('main').attrs({
-    role: 'main',
-})`
-    padding: 3.5rem;
-    position: relative;
-
-    ${between('small', 'medium')`
-    padding: 2rem;
-  `}
-
-    ${lessThan('small')`
-    padding: 1.5rem;
-  `}
-`;
-
 export const Intro = styled(motion.article)`
     position: relative;
     color: var(--foreground);
