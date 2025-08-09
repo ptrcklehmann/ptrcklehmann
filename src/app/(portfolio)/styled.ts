@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { between, lessThan } from '@/styles/breakpoints';
 
 export const Main = styled('main').attrs({
-    'role': 'main',
-    'aria-hidden': 'true',
+    role: 'main',
 })`
     padding: 3.5rem;
     position: relative;
