@@ -19,8 +19,3 @@ export const HeaderContainer = styled('header').attrs({
       padding: 1.5rem;
     `}
 `;
-
-export const LogoContainer = styled.div`
-    display: flex;
-    align-items: center;
-`;
