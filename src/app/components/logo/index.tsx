@@ -3,7 +3,13 @@ import { SVGProps } from "react";
 import { StyledLogo } from "./styled";
 
 export const Logo = (props: SVGProps<SVGSVGElement>) => (
-    <StyledLogo xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" {...props}>
+    <StyledLogo
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 300 300"
+        role="img"
+        aria-label="Patrick Lehmann logo"
+        {...props}
+    >
         <defs>
             <linearGradient
                 id="yellow-linear"
