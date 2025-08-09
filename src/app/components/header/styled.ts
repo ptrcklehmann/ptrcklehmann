@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { between, lessThan } from '@/styles/breakpoints';
 
 export const HeaderContainer = styled('header').attrs({
-    'role': 'banner',
-    'aria-hidden': 'true',
+    role: 'banner',
 })`
     display: flex;
     justify-content: space-between;
