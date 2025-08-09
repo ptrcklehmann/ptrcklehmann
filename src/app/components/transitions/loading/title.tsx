@@ -8,8 +8,8 @@ const titleVariants = {
         y: 0,
         opacity: 1,
         transition: {
-            duration: 0.8,
-            ease: [0.645, 0.045, 0.355, 1.0],
+            duration: 0.6,
+            ease: [0.22, 1, 0.36, 1],
             delay: 0.4,
         },
     },
@@ -18,6 +18,7 @@ const titleVariants = {
         opacity: 0,
         transition: {
             duration: 0.3,
+            ease: [0.4, 0, 0.2, 1],
         },
     },
 };

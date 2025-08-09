@@ -13,7 +13,7 @@ export const LoadingScreen = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary);
+    background-color: transparent; /* allow underlying page to be revealed by blinds */
     transform: translateZ(0);
     text-align: center;
     cursor: progress;
@@ -28,19 +28,22 @@ export const GridContainer = styled(motion.div)`
     z-index: 2;
     display: flex;
     flex-direction: column;
-    background: var(--background);
+    background: transparent; /* avoid filling gaps; reveal underlying page */
+    will-change: transform, opacity;
+    contain: layout paint;
 `;
 
 export const GridItem = styled(motion.div)`
-    flex: 1;
+    flex: 1 0 0;
     background: var(--primary);
-    transform-origin: top center;
+    transform-origin: top center; /* blinds open upwards */
+    will-change: transform, opacity;
 `;
 
 export const TitleContainer = styled(motion.div)`
     margin: 0;
     overflow: hidden;
-    color: var(--background);
+    /* color: var(--background); */
     position: absolute;
     top: 0;
     bottom: 0;
