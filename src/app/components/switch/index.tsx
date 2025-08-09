@@ -16,7 +16,12 @@ export const ThemeSwitch = () => {
   };
 
   return (
-    <SwitchButton onClick={handleOnClick}>
+    <SwitchButton
+      type="button"
+      onClick={handleOnClick}
+      aria-label="Toggle theme"
+      aria-pressed={resolvedMode === "dark"}
+    >
       <SwitchSpan>Switch</SwitchSpan>
     </SwitchButton>
   );
