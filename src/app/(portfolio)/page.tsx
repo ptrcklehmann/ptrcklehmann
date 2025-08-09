@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
             title: `${RESUME_OG_DATA.name} - Frontend Developer`,
             description: RESUME_OG_DATA.about,
             type: 'website',
-            locale: 'en_UK',
+            locale: 'en_GB',
             siteName: 'Patrick Lehmann - Frontend Developer',
             url: 'https://ptrcklehmann.com',
             images: [
