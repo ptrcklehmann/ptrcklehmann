@@ -22,7 +22,6 @@ export const ThemeSwitch = () => {
           aria-label="Toggle theme"
           aria-pressed={resolvedMode === 'dark'}
           tabIndex={0}
-          role="switch"
       >
           <SwitchSpan>Switch</SwitchSpan>
       </SwitchButton>
