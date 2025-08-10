@@ -1,18 +1,18 @@
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 import { TitleContainer, TitleLine } from './styled';
 
-const titleVariants = {
+const titleVariants: Variants = {
     initial: { y: 100, opacity: 0 },
-    animate: {
+    animate: (i: number) => ({
         y: 0,
         opacity: 1,
         transition: {
             duration: 0.6,
             ease: [0.22, 1, 0.36, 1],
-            delay: 0.4,
+            delay: i * 0.5,
         },
-    },
+    }),
     exit: {
         y: -100,
         opacity: 0,
@@ -41,6 +41,7 @@ export const TitleAnimated = () => {
                     variants={titleVariants}
                     initial="initial"
                     animate="animate"
+                    custom={1}
                     exit="exit"
                 >
                     Lehmann

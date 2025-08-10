@@ -4,8 +4,8 @@ import { MainContainer } from '../components/main';
 export function generateViewport() {
     return {
         themeColor: [
-            { media: '(prefers-color-scheme: dark)', color: '#252728' },
-            { media: '(prefers-color-scheme: light)', color: '#f4f6f5' },
+            { media: '(prefers-color-scheme: dark)', color: 'rgb(18, 25, 31)' },
+            { media: '(prefers-color-scheme: light)', color: 'rgb(244, 246, 245)' },
         ],
     };
 }

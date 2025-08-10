@@ -41,10 +41,8 @@ export const GridItem = styled(motion.div)`
 `;
 
 export const TitleContainer = styled(motion.div)`
-    margin: 0;
-    overflow: hidden;
-    /* color: var(--background); */
     position: absolute;
+    margin: 0;
     top: 0;
     bottom: 0;
     left: 0;
@@ -69,9 +67,8 @@ export const TitleContainer = styled(motion.div)`
 export const TitleLine = styled(motion.div)`
     display: flex;
     font-size: var(--fs-extra-large);
-    color: #252728;
-    line-height: 0.85;
-    overflow: hidden;
+    color: var(--background);
+    line-height: 1;
     font-weight: 700;
 
     /* Tablet and lower */
